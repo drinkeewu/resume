@@ -1,0 +1,51 @@
+/*
+* @Author: Drinkee
+* @Date:   2017-07-19 12:02:24
+* @Last Modified by:   Drinkee
+* @Last Modified time: 2017-07-19 22:13:06
+*/
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background: #f3f5f7;
+}
+body{
+    font: 16px/1.5 "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    color: #333;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    border: none;
+}
+span{
+    display: inline-block;
+}
+strong{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    background: #eee;
+}
+label{
+    cursor: pointer;
+}
+input[type='checkbox']{
+    cursor: pointer;
+}
+input{
+    outline: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+}
+a:hover{
+    text-decoration: none;
+}

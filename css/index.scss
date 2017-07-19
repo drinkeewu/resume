@@ -1,8 +1,8 @@
 /*
 * @Author: Drinkee
 * @Date:   2017-07-19 11:45:55
-* @Last Modified by:   Drinkee
-* @Last Modified time: 2017-07-19 22:35:39
+* @Last Modified by:   drinkeewu
+* @Last Modified time: 2017-07-19 23:26:11
 */
 $green: #5DC3B1;
 $gray : #6c6b6b;
@@ -94,6 +94,9 @@ $gray : #6c6b6b;
 					.i-vue{
 						width: 125px;
 					}
+					.i-es6{
+						width: 80px;
+					}
 				}
 			}
 		}
@@ -116,7 +119,7 @@ $gray : #6c6b6b;
 		.item{
 			padding-bottom: 30px;
 			h1{
-				color: #6c6b6b;
+				color: $gray;
 				font-size: 30px;
 			}
 			.section-bd{

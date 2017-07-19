@@ -1,8 +1,8 @@
 /*
 * @Author: Drinkee
 * @Date:   2017-07-19 11:45:55
-* @Last Modified by:   Drinkee
-* @Last Modified time: 2017-07-19 22:35:39
+* @Last Modified by:   drinkeewu
+* @Last Modified time: 2017-07-19 23:26:11
 */
 .resume-page {
   display: flex;
@@ -78,6 +78,8 @@
             width: 130px; }
           .resume-page .content-left .skill-list .item .level-box .i-vue {
             width: 125px; }
+          .resume-page .content-left .skill-list .item .level-box .i-es6 {
+            width: 80px; }
     .resume-page .content-left .contact {
       position: absolute;
       bottom: 80px;

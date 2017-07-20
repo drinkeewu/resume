@@ -11,6 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/print.css" media="print">
+	<link rel="stylesheet" type="text/css" href="./font/iconfont.css">
 	<title>resume</title>
 </head>
 <body>
@@ -106,12 +108,15 @@
 			<section class="contact">
 				<ul>
 					<li>
+						<i class="iconfont icon-emailalt"></i>
 						<span>drinkeewu@foxmail.com</span>
 					</li>
 					<li>
-						<span>132******90</span>
+						<i class="iconfont icon-phone"></i>
+						<span>13202481990</span>
 					</li>
 					<li>
+						<i class="iconfont icon-github"></i>
 						<span>github.com/drinkeewu</span>
 					</li>
 				</ul>
@@ -140,7 +145,7 @@
 							<strong>界面设计</strong>
 							<strong>前端开发</strong>
 							<strong>数据渲染</strong><br>
-							该项目是一个SPA单页应用，基于Vue.js框架进行开发，采用前后端分离开发模式。视图层采用element-UI作为UI组件，逻辑层采用模块化处理，项目上线后不断进行维护和优化。
+							该项目是一个SPA单页应用，基于Vue.js框架进行开发，采用前后端分离开发模式。视图层采用element-UI作为UI组件，逻辑层采用模块化处理，项目上线后不断的进行维护和重构，优化用户体验和性能。
 						</p>
 					</div>
 				</div>
@@ -159,12 +164,13 @@
 					<div class="item-bd">
 						<p class="section-content">
 							<strong>界面设计</strong>
-							<strong>前端开发</strong>
+							<strong>接口封装</strong>
+							<strong>前端开发</strong><br>
+							该项目为移动端页面，利用HTML5、CSS3、Sass、rem自适应等技术展示前端界面，通过Bmob后端云进行云端数据存储。项目主要模拟了汽车租赁的基本流程。
 						</p>
 					</div>
 				</div>
 				<div class="section-bd">
-
 					<div class="item-hd">
 						<span class="item-title">GoMall电商平台</span>
 						<div class="item-tag">
@@ -174,6 +180,15 @@
 							<i class="connect">-</i>
 							<span class="tag-bd">Webpack</span>
 						</div>
+					</div>
+					<div class="item-bd">
+						<p class="section-content">
+							<strong>界面设计</strong>
+							<strong>模块化</strong>
+							<strong>前端开发</strong><br>
+							该项目参照主流电商架构、采用模块化开发方式。使用了EJS模版和hogan渲染引擎对界面进行渲染，组件化开发模式有利于代码后期的维护和优化。<br>
+							通过Node.js + Express框架模拟后台数据，利用jQuery封装好的Ajax接口与后台进行数据交互，使用Webpack进行自动化构建打包。
+						</p>
 					</div>
 				</div>
 			</section>
@@ -200,7 +215,7 @@
 								<strong>界面设计</strong>
 								<strong>前端开发</strong>
 								<strong>优化和维护</strong><br>
-								参与公司商家管理系统项目开发过程的需求分析，负责项目界面的设计和重构、页面数据的呈现。最后完成项目上线，后续对项目进行维护和优化。
+								参与公司商家管理系统项目开发过程的需求分析，负责项目界面的设计和重构、页面数据的呈现。最后完成项目上线，极大的方便了公司合作商家管理自己的档案和信息。后期对项目进行维护和优化。
 							</p>
 							<span class="item-time">
 								2017.6 - 2017.7
@@ -209,7 +224,7 @@
 								<strong>界面设计</strong>
 								<strong>组件开发</strong>
 								<strong>前端开发</strong><br>
-								根据业务需求对界面进行设计并完成运营中心组件的开发和多个页面的重构工作。
+								根据业务需求对界面进行设计并完成运营中心各个模块组件的开发、页面的重构。
 							</p>
 						</div>
 					</div>
@@ -220,26 +235,37 @@
 				<ul class="seciton-list">
 					<li>
 						<p class="section-content">
+							<i class="iconfont icon-dot"></i>
 							熟悉使用HTML5、CSS3、Sass ，能准备还原设计稿
 						</p>
 					</li>
 					<li>
 						<p class="section-content">
+						<i class="iconfont icon-dot"></i>
 							会点设计，有点审美能力，重视用户体验
 						</p>
 					</li>
 					<li>
 						<p class="section-content">
+						<i class="iconfont icon-dot"></i>
 							掌握响应式布局、Flex布局
 						</p>
 					</li>
 					<li>
 						<p class="section-content">
+						<i class="iconfont icon-dot"></i>
+							良好的JavaScript基础，了解OOP设计模式
+						</p>
+					</li>
+					<li>
+						<p class="section-content">
+						<i class="iconfont icon-dot"></i>
 							熟悉MVVM框架Vue、了解微信小程序
 						</p>
 					</li>
 					<li>
 						<p class="section-content">
+						<i class="iconfont icon-dot"></i>
 							熟练使用Git进行版本控制和代码托管、Markdown进行文档编写，并以Sublime、VSCode作为日常开发工具进行工作，了解项目开发流程及开发调试工具的使用。
 						</p>
 					</li>
@@ -263,5 +289,7 @@
 			</section>
 		</div>
 	</div>
+	<a class="print-btn">打印PDF</a>
+	<script src="./js/print.js"></script>
 </body>
 </html>

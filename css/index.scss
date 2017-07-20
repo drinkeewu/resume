@@ -2,7 +2,7 @@
 * @Author: Drinkee
 * @Date:   2017-07-19 11:45:55
 * @Last Modified by:   drinkeewu
-* @Last Modified time: 2017-07-19 23:26:11
+* @Last Modified time: 2017-07-20 12:21:29
 */
 $green: #5DC3B1;
 $gray : #6c6b6b;
@@ -106,8 +106,12 @@ $gray : #6c6b6b;
 			left: 40px;
 			ul{
 				li{
+					line-height: 40px;
 					font-size: 18px;
 					font-weight: bold;
+					i.iconfont{
+						font-size: 22px;
+					}
 				}
 			}
 		}
@@ -163,8 +167,22 @@ $gray : #6c6b6b;
 				.section-content{
 					line-height: 26px;
 					margin-bottom: 10px;
+					i.icon-dot{
+						color: $green;
+					}
 				}
 			}
 		}
 	}
+}
+.print-btn{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	padding: 8px;
+	cursor: pointer;
+	background: $green;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
 }

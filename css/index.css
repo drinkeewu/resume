@@ -2,7 +2,7 @@
 * @Author: Drinkee
 * @Date:   2017-07-19 11:45:55
 * @Last Modified by:   drinkeewu
-* @Last Modified time: 2017-07-20 12:32:55
+* @Last Modified time: 2017-07-20 12:43:08
 */
 .resume-page {
   display: flex;
@@ -86,8 +86,7 @@
       left: 40px; }
       .resume-page .content-left .contact ul li {
         line-height: 40px;
-        font-size: 18px;
-        font-weight: bold; }
+        font-size: 18px; }
         .resume-page .content-left .contact ul li i.iconfont {
           font-size: 22px; }
   .resume-page .content-right {

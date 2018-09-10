@@ -8,7 +8,7 @@
   display: flex;
   margin: 50px auto;
   width: 1050px;
-  height: 1485px;
+  height: 100%;
   background: #fff;
   box-shadow: 0 0 15px #c0c0c0; }
   .resume-page .content-left {
@@ -77,9 +77,9 @@
           .resume-page .content-left .skill-list .item .level-box .i-scss {
             width: 130px; }
           .resume-page .content-left .skill-list .item .level-box .i-vue {
-            width: 125px; }
+            width: 80%; }
           .resume-page .content-left .skill-list .item .level-box .i-es6 {
-            width: 80px; }
+            width: 70%; }
     .resume-page .content-left .contact {
       position: absolute;
       bottom: 80px;
@@ -93,12 +93,12 @@
     flex: 5;
     padding: 50px 50px 50px 40px; }
     .resume-page .content-right .item {
-      padding-bottom: 30px; }
+      padding-bottom: 15px; }
       .resume-page .content-right .item h1 {
         color: #6c6b6b;
         font-size: 30px; }
       .resume-page .content-right .item .section-bd {
-        padding: 15px 0; }
+        padding: 10px 0; }
         .resume-page .content-right .item .section-bd .item-hd .item-title {
           color: #5DC3B1;
           font-size: 20px;

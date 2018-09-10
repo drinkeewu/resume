@@ -10,7 +10,7 @@ $gray : #6c6b6b;
 	display: flex;
 	margin: 50px auto;
 	width: 1050px;
-	height: 1485px;
+	height: 100%;
 	background: #fff;
 	box-shadow: 0 0 15px #c0c0c0;
 	.content-left{
@@ -92,10 +92,10 @@ $gray : #6c6b6b;
 						width: 130px;
 					}
 					.i-vue{
-						width: 125px;
+						width: 80%;
 					}
 					.i-es6{
-						width: 80px;
+						width: 70%;
 					}
 				}
 			}
@@ -121,13 +121,13 @@ $gray : #6c6b6b;
 		flex: 5;
 		padding: 50px 50px 50px 40px;
 		.item{
-			padding-bottom: 30px;
+			padding-bottom: 15px;
 			h1{
 				color: $gray;
 				font-size: 30px;
 			}
 			.section-bd{
-				padding: 15px 0;
+				padding: 10px 0;
 				.item-hd{
 					.item-title{
 						color: $green;

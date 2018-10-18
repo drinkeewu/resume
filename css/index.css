@@ -16,6 +16,7 @@
     flex: 2;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 40px;
     color: #fff;
     background: #5DC3B1; }
@@ -42,6 +43,12 @@
         border-bottom: 1px solid #1d7d71;
         color: #1f8073;
         font-weight: bold; }
+    .resume-page .content-left .edu {
+      margin-bottom: 30px;
+      line-height: 30px; }
+      .resume-page .content-left .edu .title {
+        color: #1d7d71;
+        line-height: 40px; }
     .resume-page .content-left .skill-list {
       padding: 40px 0;
       color: #fff;
@@ -80,23 +87,19 @@
             width: 80%; }
           .resume-page .content-left .skill-list .item .level-box .i-es6 {
             width: 70%; }
-    .resume-page .content-left .contact {
-      position: absolute;
-      bottom: 80px;
-      left: 40px; }
-      .resume-page .content-left .contact ul li {
-        line-height: 40px;
-        font-size: 18px; }
-        .resume-page .content-left .contact ul li i.iconfont {
-          font-size: 22px; }
+    .resume-page .content-left .contact ul li {
+      line-height: 40px;
+      font-size: 18px; }
+      .resume-page .content-left .contact ul li i.iconfont {
+        font-size: 22px; }
   .resume-page .content-right {
     flex: 5;
-    padding: 50px 50px 50px 40px; }
+    padding: 35px 50px 30px 40px; }
     .resume-page .content-right .item {
       padding-bottom: 15px; }
       .resume-page .content-right .item h1 {
         color: #6c6b6b;
-        font-size: 30px; }
+        font-size: 25px; }
       .resume-page .content-right .item .section-bd {
         padding: 10px 0; }
         .resume-page .content-right .item .section-bd .item-hd .item-title {
@@ -121,16 +124,16 @@
         .resume-page .content-right .item .section-bd .item-bd {
           color: #6c6b6b; }
           .resume-page .content-right .item .section-bd .item-bd .item-time {
-            margin-top: 15px;
+            margin-top: 5px;
             color: #5DC3B1;
             font-weight: bold; }
       .resume-page .content-right .item .seciton-list {
         margin-top: 20px; }
-        .resume-page .content-right .item .seciton-list .section-content {
-          line-height: 1.5;
-          margin-bottom: 8px; }
-          .resume-page .content-right .item .seciton-list .section-content i.icon-dot {
-            color: #5DC3B1; }
+      .resume-page .content-right .item .section-content {
+        line-height: 1.5;
+        margin-bottom: 8px; }
+        .resume-page .content-right .item .section-content i.icon-dot {
+          color: #5DC3B1; }
 
 .print-btn {
   position: fixed;

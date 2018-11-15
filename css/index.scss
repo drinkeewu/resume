@@ -1,8 +1,8 @@
 /*
 * @Author: Drinkee
 * @Date:   2017-07-19 11:45:55
-* @Last Modified by:   drinkeewu
-* @Last Modified time: 2017-07-20 12:43:08
+ * @Last Modified by: Drinkee
+ * @Last Modified time: 2018-10-29 11:17:11
 */
 $green: #5DC3B1;
 $deep-green: #1d7d71;
@@ -14,13 +14,16 @@ $gray : #6c6b6b;
 	height: 100%;
 	background: #fff;
 	box-shadow: 0 0 15px #c0c0c0;
+	.underline {
+		text-decoration: underline;
+	}
 	.content-left{
 		position: relative;
 		flex: 2;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 40px;
+		padding: 40px 25px 40px 25px;
 		color: #fff;
 		background: #5DC3B1;
 		.avatar{
@@ -56,6 +59,7 @@ $gray : #6c6b6b;
 		.edu {
 			margin-bottom: 30px;
 			line-height: 30px;
+			font-weight: bold;
 			.title {
 				color: $deep-green;
 				line-height: 40px;
@@ -107,6 +111,9 @@ $gray : #6c6b6b;
 					.i-es6{
 						width: 70%;
 					}
+					.i-webpack{
+						width: 60%;
+					}
 				}
 			}
 		}
@@ -116,7 +123,7 @@ $gray : #6c6b6b;
 			// left: 40px;
 			ul{
 				li{
-					line-height: 40px;
+					line-height: 30px;
 					font-size: 18px;
 					// font-weight: bold;
 					i.iconfont{
@@ -128,8 +135,8 @@ $gray : #6c6b6b;
 	}
 
 	.content-right{
-		flex: 5;
-		padding: 35px 50px 30px 40px;
+		flex: 6;
+		padding: 20px;
 		.item{
 			padding-bottom: 15px;
 			h1{
@@ -137,8 +144,8 @@ $gray : #6c6b6b;
 				font-size: 25px;
 			}
 			.section-bd{
-				padding: 10px 0;
-				.item-hd{
+				padding: 5px 0;
+				.item-hd {
 					.item-title{
 						color: $green;
 						font-size: 20px;

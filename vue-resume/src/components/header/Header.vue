@@ -15,9 +15,8 @@ export default {
   name: 'Header',
 };
 </script>
-
 <style lang="scss" scoped>
-$green: #5DC3B1;
+@import '@/styles/common.scss';
 .resume-page-header {
   width: 100%;
   background: $green;

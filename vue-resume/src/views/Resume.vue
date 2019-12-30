@@ -1,17 +1,21 @@
 <template>
   <div class="resume-page">
     <r-header />
-    <div class="resume-page__content" />
+    <div class="resume-page__content">
+      <project />
+    </div>
   </div>
 </template>
 
 <script>
-import Header from '@/components/header';
+
+import { Project, Header } from '@/components';
 
 export default {
   name: 'Resume',
   components: {
     'r-header': Header,
+    project: Project,
   },
 };
 </script>
@@ -28,6 +32,7 @@ export default {
   min-height: 1485.0755px;
   &__content {
     flex:1;
+    padding: 40px;
   }
 }
 </style>

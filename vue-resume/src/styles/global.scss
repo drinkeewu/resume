@@ -11,3 +11,25 @@ body{
   font: 16px/1.5 "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   color: #333;
 }
+/* 改变主题色变量 */
+$--color-primary: #5DC3B1;
+
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+
+$scroller-color: #DCDFE6;
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: rgba($color: $--color-primary, $alpha: 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: $--color-primary;
+  border-radius: 5px;
+}
+

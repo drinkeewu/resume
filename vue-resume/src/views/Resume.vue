@@ -1,21 +1,21 @@
 <template>
   <div class="resume-page">
-    <r-header />
     <div class="resume-page__content">
-      <project />
+      <r-aside />
+      <r-content />
     </div>
   </div>
 </template>
 
 <script>
 
-import { Project, Header } from '@/components';
+import { Content, Aside } from '@/components';
 
 export default {
   name: 'Resume',
   components: {
-    'r-header': Header,
-    project: Project,
+    'r-aside': Aside,
+    'r-content': Content,
   },
 };
 </script>
@@ -32,7 +32,7 @@ export default {
   min-height: 1485.0755px;
   &__content {
     flex:1;
-    padding: 40px;
+    display:flex;
   }
 }
 </style>

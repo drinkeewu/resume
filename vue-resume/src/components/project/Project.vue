@@ -1,16 +1,5 @@
 <template>
-  <div class="resume-page-project">
-    <el-timeline>
-      <el-timeline-item
-        v-for="(project, index) in projects"
-        :key="`project${index}`"
-        :timestamp="project.date"
-        color="#5DC3B1"
-      >
-        {{ project.name }}
-      </el-timeline-item>
-    </el-timeline>
-  </div>
+  <div class="resume-page-project" />
 </template>
 
 <script>

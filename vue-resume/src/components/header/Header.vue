@@ -16,11 +16,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '@/styles/common.scss';
 .resume-page-header {
   width: 100%;
-  background: $green;
-  color: #fff;
   padding: 40px;
   box-sizing: border-box;
   .avatar {

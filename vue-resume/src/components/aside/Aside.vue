@@ -1,50 +1,69 @@
 <template>
   <div class="resume-aside">
-    <img
-      class="avatar"
-      src="../../assets/avatar.png"
-    >
-    <div class="personal-desc">
-      <p class="name">
-        吴俊杰
-      </p>
+    <div class="resume-aside-top">
+      <img
+        class="avatar"
+        src="../../assets/avatar.png"
+      >
+      <div class="personal-desc">
+        <p class="name">
+          吴俊杰
+        </p>
+      </div>
+      <progress-list :data="skills" />
     </div>
 
-    <r-progress :value="50" />
+    <div class="resume-aside-bottom" />
   </div>
 </template>
 
 <script>
-import Progress from '@/components/progress';
+import { ProgressList } from '@/components';
+
 
 export default {
   name: 'Aside',
   components: {
-    'r-progress': Progress,
+    'progress-list': ProgressList,
+  },
+  data() {
+    return {
+      skills: [
+        { name: 'JavaScript', value: 90 },
+        { name: 'Vue', value: 90 },
+        { name: 'React', value: 75 },
+        { name: 'TypeScript', value: 70 },
+      ],
+      contacts: [
+        { icon: 'emailalt', text: 'drinkeewu@foxmail.com' },
+      ],
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-$bg: #F7F8FA;
-$font-color: #33477C;
+$bg: #f7f8fa;
+@import '../../styles/common.scss';
 .resume-aside {
-  color: $font-color;
+  color: $deep-blue;
   flex: 3;
   padding: 50px;
   box-sizing: border-box;
   background-color: $bg;
-  .avatar {
-    width: 240px;
-    height: 240px;
-    background-color:rgba($color: #6ACCFA, $alpha: .5);
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  .personal-desc {
-    font-weight: bold;
-    .name {
-      font-size: 30px;
+  &-top {
+    .avatar {
+      width: 240px;
+      height: 240px;
+      background-color: rgba($color: #6accfa, $alpha: 0.5);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .personal-desc {
+      font-weight: bold;
+      .name {
+        font-size: 30px;
+      }
     }
   }
 }

@@ -11,12 +11,19 @@
 
 import { Content, Aside } from '@/components';
 
+
 export default {
   name: 'Resume',
   components: {
     'r-aside': Aside,
     'r-content': Content,
   },
+  data() {
+    return {
+
+    };
+  },
+
 };
 </script>
 

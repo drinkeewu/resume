@@ -13,18 +13,37 @@
       <progress-list :data="skills" />
     </div>
 
-    <div class="resume-aside-bottom" />
+    <div class="resume-aside-bottom">
+      <text-section
+        title="教育背景"
+        class="font-bold"
+      >
+        <p>电子科技大学中山学院</p>
+        <p>2013.9 - 2017.7</p>
+        <p>软件工程 - 本科</p>
+      </text-section>
+      <icon-list
+        :list="contacts"
+        class="icon-list"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import { ProgressList } from '@/components';
+import {
+  ProgressList,
+  IconLineList,
+  TextSection,
+} from '@/components';
 
 
 export default {
   name: 'Aside',
   components: {
     'progress-list': ProgressList,
+    'icon-list': IconLineList,
+    'text-section': TextSection,
   },
   data() {
     return {
@@ -36,6 +55,8 @@ export default {
       ],
       contacts: [
         { icon: 'emailalt', text: 'drinkeewu@foxmail.com' },
+        { icon: 'phone', text: '13200000000' },
+        { icon: 'github', text: 'github.com/drinkeewu' },
       ],
     };
   },
@@ -46,9 +67,12 @@ export default {
 $bg: #f7f8fa;
 @import '../../styles/common.scss';
 .resume-aside {
-  color: $deep-blue;
   flex: 3;
-  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: $deep-blue;
+  padding: 40px 30px;
   box-sizing: border-box;
   background-color: $bg;
   &-top {
@@ -65,6 +89,9 @@ $bg: #f7f8fa;
         font-size: 30px;
       }
     }
+  }
+  @media screen and (max-width: 1049px){
+
   }
 }
 </style>

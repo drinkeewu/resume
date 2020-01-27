@@ -11,6 +11,9 @@
   text-align: center;
   color: #2c3e50;
   overflow: auto;
+  @media screen and (max-width: 1049px){
+    height: 100%;
+  }
 }
 
 

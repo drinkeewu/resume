@@ -89,5 +89,12 @@ export default {
       background: $deep-blue;
     }
   }
+  @media screen and (max-width: 1049px){
+    display: block;
+    text-align: left;
+    &-bar {
+      margin-top: 2px;
+    }
+  }
 }
 </style>

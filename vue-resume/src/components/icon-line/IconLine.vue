@@ -4,6 +4,9 @@
     :style="style"
   >
     <i :class="iconClass" />
+    <span class="text">
+      {{ text }}
+    </span>
   </div>
 </template>
 
@@ -41,6 +44,18 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+.comp-icon-line {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  .iconfont {
+    font-size: 22px;
+  }
+  .text {
+    margin-left: 10px;
+  }
+
+}
 
 </style>

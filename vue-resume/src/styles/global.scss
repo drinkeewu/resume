@@ -11,6 +11,15 @@ body{
   font: 16px/1.5 "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   color: #333;
 }
+
+p {
+  margin: 5px 0;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
 /* 改变主题色变量 */
 $--color-primary: #33477C;
 

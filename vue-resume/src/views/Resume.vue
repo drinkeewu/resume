@@ -41,5 +41,12 @@ export default {
     flex:1;
     display:flex;
   }
+  @media screen and (max-width: 1049px){
+    margin: 0;
+    width: 100%;
+    &__content{
+      display: block;
+    }
+  }
 }
 </style>

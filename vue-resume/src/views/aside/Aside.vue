@@ -9,6 +9,9 @@
         <p class="name">
           吴俊杰
         </p>
+        <p class="position">
+          Web前端开发工程师
+        </p>
       </div>
       <progress-list :data="skills" />
     </div>
@@ -31,12 +34,7 @@
 </template>
 
 <script>
-import {
-  ProgressList,
-  IconLineList,
-  TextSection,
-} from '@/components';
-
+import { ProgressList, IconLineList, TextSection } from '@/components';
 
 export default {
   name: 'Aside',
@@ -65,7 +63,7 @@ export default {
 
 <style lang="scss" scoped>
 $bg: #f7f8fa;
-@import '../../styles/common.scss';
+@import "../../styles/common.scss";
 .resume-aside {
   flex: 3;
   display: flex;
@@ -74,6 +72,7 @@ $bg: #f7f8fa;
   color: $deep-blue;
   padding: 40px 30px;
   box-sizing: border-box;
+  text-align: center;
   background-color: $bg;
   &-top {
     .avatar {
@@ -84,14 +83,16 @@ $bg: #f7f8fa;
       overflow: hidden;
     }
     .personal-desc {
-      font-weight: bold;
       .name {
-        font-size: 30px;
+        font-size: 33px;
+        // font-weight: bold;
+      }
+      .position {
+        font-size: 18px;
       }
     }
   }
-  @media screen and (max-width: 1049px){
-
+  @media screen and (max-width: 1049px) {
   }
 }
 </style>

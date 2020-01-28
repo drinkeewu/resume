@@ -1,6 +1,6 @@
 <template>
   <div class="resume-page">
-    <div class="resume-page__content">
+    <div class="resume-page__center">
       <r-aside />
       <r-content />
     </div>
@@ -9,7 +9,8 @@
 
 <script>
 
-import { Content, Aside } from '@/components';
+import Aside from '@/views/aside';
+import Content from '@/views/content';
 
 
 export default {
@@ -37,14 +38,14 @@ export default {
   background: #fff;
   box-shadow: 0 0 15px #c0c0c0;
   min-height: 1485.0755px;
-  &__content {
+  &__center {
     flex:1;
     display:flex;
   }
   @media screen and (max-width: 1049px){
     margin: 0;
     width: 100%;
-    &__content{
+    &__center{
       display: block;
     }
   }

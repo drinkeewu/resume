@@ -1,8 +1,17 @@
 <template>
   <div class="comp-text-section">
-    <h1 class="comp-text-section__title">
-      {{ title }}
-    </h1>
+    <div
+      class="comp-text-section__title"
+      :style="titleStyle"
+    >
+      <slot
+        name="title"
+      >
+        <h1>
+          {{ title }}
+        </h1>
+      </slot>
+    </div>
     <div class="comp-text-section__content">
       <slot />
     </div>
@@ -10,12 +19,25 @@
 </template>
 
 <script>
+import { DEFAULT_COLOR } from '@/common/constants';
+
 export default {
   name: 'TextSection',
   props: {
     title: {
       type: String,
       default: '',
+    },
+    titleColor: {
+      type: String,
+      default: DEFAULT_COLOR,
+    },
+  },
+  computed: {
+    titleStyle() {
+      return {
+        color: this.titleColor,
+      };
     },
   },
 };
@@ -27,8 +49,9 @@ $text-color: #6c6b6b;
   margin: 20px 0;
   text-align: left;
   &__title {
-    color: $text-color;
-    font-size: 25px;
+    h1 {
+      font-size: 25px;
+    }
   }
   &__content {
     color:$text-color;

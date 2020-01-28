@@ -73,11 +73,14 @@ export default {
 <style lang="scss" scoped>
 @import "../../styles/common.scss";
 .comp-progress {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
+  margin-top: 2px;
+  text-align: left;
   margin-bottom: 15px;
   font-size: 16px;
   &-name {
+    padding-left: 5px;
     margin-right: 10px;
     text-align: right;
   }
@@ -85,16 +88,14 @@ export default {
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
-    background: rgba($color: $deep-blue, $alpha: 0.4);
+    background: rgba($color: $deep-blue, $alpha: 0.2);
     &__inner {
       background: $deep-blue;
     }
   }
-  @media screen and (max-width: 1049px){
+  @media screen and (max-width: 1049px) {
     display: block;
-    text-align: left;
     &-bar {
-      margin-top: 2px;
     }
   }
 }

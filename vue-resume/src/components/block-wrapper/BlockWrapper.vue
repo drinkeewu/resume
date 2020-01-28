@@ -1,7 +1,10 @@
 <template>
   <div class="block-wrapper">
     <div class="block-wrapper-header">
-      <div class="block-wrapper-header__title">
+      <div
+        class="block-wrapper-header__title"
+        :class="{dark: theme === 'dark'}"
+      >
         {{ title }}
       </div>
     </div>
@@ -16,6 +19,10 @@ export default {
     title: {
       type: String,
       default: '',
+    },
+    theme: {
+      type: String,
+      default: 'light',
     },
   },
 };
@@ -34,6 +41,8 @@ export default {
 }
 .block-wrapper {
   margin-bottom: 15px;
+  color: #6c6b6b;
+  text-align: left;
   &-header {
     position: relative;
     display: flex;
@@ -42,10 +51,9 @@ export default {
     &:before {
       left: 0;
       @include split-line();
-
     }
     &:after {
-      right: 0 ;
+      right: 0;
       @include split-line();
     }
     &__title {
@@ -57,6 +65,9 @@ export default {
       color: $deep-blue;
       font-size: 22px;
       font-weight: bold;
+      &.dark {
+        background: rgba($color: $deep-blue, $alpha: 0.1) ;
+      }
     }
   }
 }

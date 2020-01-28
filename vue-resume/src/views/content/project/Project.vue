@@ -141,6 +141,7 @@ export default {
 ul {
   margin: 0;
   padding-left: 5px;
+  text-align: left;
 }
 ul li {
   list-style: none;

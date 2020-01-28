@@ -48,9 +48,9 @@ export default {
 .comp-icon-line {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   .iconfont {
-    font-size: 22px;
+    font-size: 20px;
   }
   .text {
     margin-left: 10px;

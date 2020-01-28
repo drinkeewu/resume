@@ -43,13 +43,14 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 $text-color: #6c6b6b;
 .comp-text-section {
   margin: 20px 0;
   text-align: left;
   &__title {
     h1 {
+      margin: 10px 0;
       font-size: 25px;
     }
   }

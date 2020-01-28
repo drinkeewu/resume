@@ -76,6 +76,7 @@ export default {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  font-size: 16px;
   &-name {
     margin-right: 10px;
     text-align: right;

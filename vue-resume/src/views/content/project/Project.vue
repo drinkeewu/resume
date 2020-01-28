@@ -9,6 +9,7 @@
         <flex
           justify="space-between"
           align="center"
+          wrap="wrap"
         >
           <h1>{{ project.title }}</h1>
           <div
@@ -112,11 +113,14 @@ export default {
             '角色权限管理、日志管理',
           ],
           dutys: ['系统架构', '通用图表组件库封装', '所有功能模块前端开发'],
-          tags: ['数据治理', '数据分析'],
+          tags: ['数据治理'],
         },
         {
           title: '智慧教育数据平台',
           techs: ['VueJs', 'Echarts'],
+          features: [
+            '汇聚广东省内各地教师、学生数据, 并通过图表进行多个维度的分析',
+          ],
           tags: ['海量图表分析'],
           dutys: ['项目重构', '逻辑抽离', '常用组件封装'],
         },
@@ -136,7 +140,7 @@ export default {
 @import "../../../styles/common.scss";
 ul {
   margin: 0;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 ul li {
   list-style: none;
@@ -151,13 +155,16 @@ ul li {
   display: flex;
   flex-shrink: 0;
   .project-tag {
-    margin-left: 10px;
+    margin: 10px 5px;
     background: #cfffd9;
     color: $deep-blue;
     padding: 0 15px;
     line-height: 2;
     border-radius: 15px;
     font-weight: bold;
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 </style>

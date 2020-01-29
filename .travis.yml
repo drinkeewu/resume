@@ -2,7 +2,7 @@ language: nodejs
 
 before_script: 
   - cd vue-resume
-  - npm i 
+  - npm install
   
 script:
   - npm test

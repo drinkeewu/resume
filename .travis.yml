@@ -1,0 +1,8 @@
+language: nodejs
+
+before_script: 
+  - cd vue-resume
+  - npm i 
+  
+script:
+  - npm test

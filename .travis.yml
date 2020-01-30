@@ -8,7 +8,6 @@ cache:
   - node_modules # 缓存npm包 
 
 before_script: 
-  - cd vue-resume
   - npm install
   
 script:
@@ -20,7 +19,7 @@ after_script:
   - git config user.name "drinkeewu"
   - git config user.email "773119690@qq.com"
   - git add .
-  - git commit -m 'auto deploy'
+  - git commit -m "auto deploy"
   - git push --force --quiet "https://${resume_token}@${GH_REF}" master:gh-pages
 
 

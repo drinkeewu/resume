@@ -15,7 +15,7 @@ script:
   - npm run build
 
 after_script:
-  - cd ../pages
+  - cd ../page
   - git init
   - git config user.name "drinkeewu"
   - git config user.email "773119690@qq.com"

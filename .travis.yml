@@ -3,6 +3,10 @@ language: nodejs
 nodejs:
   - "10.16.1"
 
+cache:
+  directories:
+  - node_modules # 缓存npm包 
+
 before_script: 
   - cd vue-resume
   - npm install
@@ -10,10 +14,20 @@ before_script:
 script:
   - npm run build
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
+after_script:
+  - cd ../pages
+  - git init
+  - git config user.name "drinkeewu"
+  - git config user.email "773119690@qq.com"
+  - git add .
+  - git commit -m 'auto deploy'
+  - git push --force --quiet "https://${resume_token}@${GH_REF}" master:gh-pages
+
+
+branches:
+  only:
+    - master # 触发集成分支
+
+env:
+  global:
+    - GH_REF: github.com/drinkeewu/resume.git

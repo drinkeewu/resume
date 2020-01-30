@@ -1,29 +1,8 @@
-# vue-resume
+# 简历
 
-## Project setup
-```
-npm install
-```
+[![Build Status](https://travis-ci.org/drinkeewu/resume.svg?branch=master)](https://travis-ci.org/drinkeewu/resume)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- PC/Wap响应式布局
+- travis-ci自动化部署
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[简历预览地址](https://drinkeewu.github.io/resume/)

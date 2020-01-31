@@ -29,10 +29,10 @@
 import Clickoutside from '@/utils/clickoutside';
 
 // eslint-disable-next-line no-restricted-properties
-const cubic = value => Math.pow(value, 3);
-const easeInOutCubic = value => (value < 0.5
-  ? cubic(value * 2) / 2
-  : 1 - cubic((1 - value) * 2) / 2);
+// const cubic = value => Math.pow(value, 3);
+// const easeInOutCubic = value => (value < 0.5
+// ? cubic(value * 2) / 2
+// : 1 - cubic((1 - value) * 2) / 2);
 
 
 export default {
@@ -70,7 +70,8 @@ export default {
     scrollToTarget(target) {
       const container = document.documentElement;
       const targetEl = document.querySelector(target);
-      container.scrollTop = targetEl.getBoundingClientRect().top;
+      container.scrollTop = targetEl.offsetTop;
+
       // const el = document.documentElement;
       // let targetEl;
       // if (target) {
@@ -90,7 +91,7 @@ export default {
       //     el.scrollTop = beginValue * (1 - easeInOutCubic(progress));
       //     rAF(frameFunc);
       //   } else {
-      //     el.scrollTop = targetEl.getBoundingClientRect().top;
+      //     el.scrollTop = targetEl.offsetTop;
       //   }
       // };
       // rAF(frameFunc);

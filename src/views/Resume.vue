@@ -1,16 +1,20 @@
 <template>
-  <div class="resume-page">
+  <div
+    id="base"
+    class="resume-page"
+  >
     <div class="resume-page__center">
       <r-aside />
       <r-content />
     </div>
+    <fix-button />
   </div>
 </template>
 
 <script>
-
 import Aside from '@/views/aside';
 import Content from '@/views/content';
+import { FixButton } from '@/components';
 
 
 export default {
@@ -18,6 +22,7 @@ export default {
   components: {
     'r-aside': Aside,
     'r-content': Content,
+    'fix-button': FixButton,
   },
   data() {
     return {

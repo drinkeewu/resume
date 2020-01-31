@@ -60,6 +60,8 @@ module.exports = {
 
     "import/no-dynamic-require": "off",
 
+    "no-return-assign": "off"
+
   },
   parserOptions: {
     parser: "babel-eslint"

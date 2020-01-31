@@ -16,6 +16,7 @@
       <progress-list :data="skills" />
 
       <block-wrapper
+        id="evalution"
         title="个人评价"
         theme="dark"
       >
@@ -34,6 +35,7 @@
 
     <div class="resume-aside-bottom">
       <block-wrapper
+        id="work"
         title="工作经历"
         theme="dark"
       >
@@ -51,6 +53,7 @@
       </block-wrapper>
 
       <block-wrapper
+        id="edu"
         title="教育背景"
         class="font-bold"
         theme="dark"

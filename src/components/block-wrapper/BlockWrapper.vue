@@ -1,6 +1,11 @@
 <template>
-  <div class="block-wrapper">
-    <div class="block-wrapper-header">
+  <div
+    :id="id"
+    class="block-wrapper"
+  >
+    <div
+      class="block-wrapper-header"
+    >
       <div
         class="block-wrapper-header__title"
         :class="{dark: theme === 'dark'}"
@@ -23,6 +28,11 @@ export default {
     theme: {
       type: String,
       default: 'light',
+    },
+    // eslint-disable-next-line vue/require-default-prop
+    id: {
+      type: String,
+      default: '',
     },
   },
 };

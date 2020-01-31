@@ -1,5 +1,8 @@
 <template>
-  <block-wrapper title="项目经历">
+  <block-wrapper
+    id="project"
+    title="项目经历"
+  >
     <text-section
       v-for="(project, pIndex) in projects"
       :key="`project${pIndex}`"

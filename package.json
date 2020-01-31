@@ -23,6 +23,7 @@
     "@vue/cli-service": "^4.1.0",
     "@vue/eslint-config-airbnb": "^4.0.0",
     "babel-eslint": "^10.0.3",
+    "babel-plugin-component": "^1.1.1",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^5.16.0",
@@ -51,8 +52,8 @@
   ],
   "config": {
     "commitizen": {
-      "path": "./vue-resume/node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
-   "homepage": "http://drinkeewu.github.io/resume"
+  "homepage": "http://drinkeewu.github.io/resume"
 }

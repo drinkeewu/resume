@@ -1,0 +1,23 @@
+{
+  "id": "1624240",
+  "name": "resume",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5013",
+      "name": "列表",
+      "font_class": "directory",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "902005",
+      "name": "arrow down",
+      "font_class": "arrow-down",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    }
+  ]
+}

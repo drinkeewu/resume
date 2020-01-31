@@ -103,7 +103,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../styles/common.scss';
-@import url("//at.alicdn.com/t/font_1624240_yo1m6944w8m.css");
 @mixin box-shadow {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
 }

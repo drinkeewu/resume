@@ -60,7 +60,11 @@ module.exports = {
 
     "import/no-dynamic-require": "off",
 
-    "no-return-assign": "off"
+    "no-return-assign": "off",
+
+    "vue/require-default-prop": 'off',
+
+    "vue/no-v-html": "off"
 
   },
   parserOptions: {

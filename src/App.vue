@@ -10,7 +10,9 @@
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   font-size: 14px;
-
+  @media screen and (max-width: 1049px){
+    font-size: 16px;
+  }
 }
 
 

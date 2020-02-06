@@ -1,7 +1,7 @@
 <template>
   <block-wrapper
     id="project"
-    title="项目经历"
+    title="项目经验"
   >
     <text-section
       v-for="(project, pIndex) in projects"
@@ -14,15 +14,17 @@
           align="center"
           wrap="wrap"
         >
-          <h1>
-            {{ project.title }}
+          <div class="project-header">
+            <h1 class="project-title">
+              {{ project.title }}
+            </h1>
             <span
               v-if="project.time"
               class="project-time"
             >
               {{ project.time.start }} - {{ project.time.end }}
             </span>
-          </h1>
+          </div>
           <div
             v-if="project.tags && project.tags.length > 0"
             class="project-tag-wrapper"
@@ -94,16 +96,12 @@ export default {
           },
           techs: ['VueJs', 'ElementUI', 'axios', 'BaiduMap API', 'Echarts', 'vue-i18n'],
           features: [
-            '帮助地接社实现信息智能化运营管理、快速处理即订即玩订单，帮助地接社在中国地区的营销',
+            '帮助东南亚地接社实现信息智能化运营管理、快速处理即订即玩订单，帮助地接社在中国地区的营销',
             '产品模块包括产品管理、云订单交易、实时库存、智能运营、财务管理、市场资源',
             '集成用户数据，做国内B2B分销，获取到实时库存，帮助提供信息和数据服务',
             '60多家签约用户，包括20多家付费用户，最大的客户盈利额在3000万以上，最小有300万',
           ],
-          dutys: [
-            '订单模块开发',
-            '旅游/行程定制化模块开发',
-            '通用组件库封装',
-            '系统日常维护优化'],
+          dutys: ['订单模块开发', '旅游/行程定制化模块开发', '通用组件库封装', '系统日常维护优化'],
           tags: ['境外旅游SaaS平台'],
         },
         {
@@ -134,7 +132,7 @@ export default {
             '服务于数十家商户, 并成功帮助商户提高业绩',
             'PC端、Wap端支持、多语言支持',
           ],
-          tags: ['C端微商城'],
+          tags: ['定制化微商城'],
         },
         {
           title: '数据质量平台',
@@ -153,7 +151,7 @@ export default {
             '针对不同企业, 根据需求开发数据可视化大屏模块、定制主题开发',
             '进入测试阶段前的使用<em>vue-test-utils</em>对每个模块进行单元测试',
           ],
-          tags: ['数据治理'],
+          tags: ['数据检测与治理'],
         },
         {
           title: '智慧教育数据平台',
@@ -166,7 +164,7 @@ export default {
             '帮助学校汇聚广东省内各地教师、学生数据',
             '将数据进行多个维度的分析, 并通过地图、关系图谱等图表进行展示',
           ],
-          tags: ['师生数据可视化分析'],
+          tags: ['教育信息可视化分析'],
           dutys: [
             '接手项目使用<em>vue-cli</em>工具对项目进行重构',
             '解决项目兼容性问题, 使其能兼容到IE9以上版本',
@@ -181,7 +179,9 @@ export default {
           },
           techs: ['VueJs', 'Composition-api', 'Echarts'],
           tags: ['自助化统计与挖掘'],
-          dutys: ['接手后根据业务逻辑对冗余代码进行拆分和重构, 并使其能够嵌入到多个数据可视化项目中'],
+          dutys: [
+            '接手后根据业务逻辑对冗余代码进行拆分和重构, 并使其能够嵌入到多个数据可视化项目中',
+          ],
           features: [
             '具有自助化多维统计分析与数据挖掘功能的平台',
             '帮助用户实现根据自身需求及特定的场景分析，对数据进行分析，满足不同应用场景的数据分析需求',
@@ -200,6 +200,20 @@ export default {
           features: [
             '根据过往项目开发过程中总结的使用场景, 对常用 <em>Echart</em> 组件进行二次封装并部署到 <em>npm</em> 服务器',
             '该组件库被广泛应用到公司项目开发中, 大幅度提高了数据可视化的开发效率, 减少重复造轮子',
+          ],
+        },
+        {
+          title: '监所资源整合平台',
+          time: {
+            start: '2019.10',
+            end: '2019.12',
+          },
+          tags: ['资源整合平台'],
+          techs: ['VueJs', 'Echarts'],
+          dutys: ['负责开发接口申请和审批模块', '改版后菜单栏组件的封装', '嵌入针对该系统定制化自助分析平台'],
+          features: [
+            '通过数据可视化的方式优化监所人员的信息展示',
+            '帮助公安机关整合内部数据资源, 对技术接口进行权限管理。',
           ],
         },
       ],
@@ -226,6 +240,7 @@ ul li {
   line-height: 1.8;
   &:before {
     content: "●"; //'\25CF'
+    margin-right: 5px;
     color: $deep-blue;
     display: inline-block;
   }
@@ -234,11 +249,18 @@ ul li {
   color: $deep-blue;
   font-weight: bold;
 }
-
-.project-time{
-  margin-left: 10px;
-  font-size: 16px;
-  color: #666
+.project-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  .project-title {
+    margin-right: 10px;
+  }
+  .project-time {
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+  }
 }
 .project-tag-wrapper {
   display: flex;

@@ -51,7 +51,7 @@ export default {
 }
 .block-wrapper {
   margin-bottom: 15px;
-  color: #6c6b6b;
+  color: $text-color;
   text-align: left;
   &-header {
     position: relative;

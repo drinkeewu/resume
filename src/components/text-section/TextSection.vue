@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style  lang="scss">
-$text-color: #6c6b6b;
+@import '../../styles/common.scss';
 .comp-text-section {
   margin: 20px 0;
   text-align: left;

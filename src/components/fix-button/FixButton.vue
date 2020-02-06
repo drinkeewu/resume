@@ -44,10 +44,10 @@ export default {
       directoryShow: false,
       directories: [
         { name: '基本信息', target: '#base' },
+        { name: '教育背景', target: '#edu' },
         { name: '个人评价', target: '#evalution' },
         { name: '工作经历', target: '#work' },
-        { name: '教育背景', target: '#edu' },
-        { name: '项目内容', target: '#project' },
+        { name: '项目经验', target: '#project' },
       ],
       activeDir: 'base',
     };

@@ -5,7 +5,9 @@
   >
     <i :class="iconClass" />
     <span class="text">
-      {{ text }}
+      <a :href="linkHref">
+        {{ text }}
+      </a>
     </span>
   </div>
 </template>
@@ -30,6 +32,7 @@ export default {
       type: String,
       default: DEFAULT_COLOR,
     },
+    linkType: String,
   },
   computed: {
     iconClass() {
@@ -39,6 +42,10 @@ export default {
       return {
         color: this.color,
       };
+    },
+    linkHref() {
+      const { linkType, text } = this;
+      return linkType ? `${linkType}:${text}` : text;
     },
   },
 };

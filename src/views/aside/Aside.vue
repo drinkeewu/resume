@@ -12,8 +12,26 @@
         <p class="position">
           Web前端开发工程师
         </p>
+        <p>男 / 1994.12</p>
       </div>
+      <block-wrapper
+        id="edu"
+        title="教育背景"
+        class="font-bold"
+        theme="dark"
+      >
+        <div class="text-center">
+          <p>电子科技大学中山学院</p>
+          <p>2013.9 - 2017.7</p>
+          <p>软件工程 - 本科</p>
+        </div>
+      </block-wrapper>
+
       <progress-list :data="skills" />
+      <icon-list
+        :list="contacts"
+        class="icon-list"
+      />
 
       <block-wrapper
         id="evalution"
@@ -28,15 +46,6 @@
           />
         </ul>
       </block-wrapper>
-    </div>
-    <div>
-      <h3>在线简历地址</h3>
-      <a href="https://drinkeewu.github.io/resume/">
-        https://drinkeewu.github.io/resume/
-      </a>
-    </div>
-
-    <div class="resume-aside-bottom">
       <block-wrapper
         id="work"
         title="工作经历"
@@ -61,24 +70,16 @@
           <p>工作内容：{{ work.duty }}</p>
         </div>
       </block-wrapper>
-
-      <block-wrapper
-        id="edu"
-        title="教育背景"
-        class="font-bold"
-        theme="dark"
-      >
-        <p>电子科技大学中山学院</p>
-        <p>2013.9 - 2017.7</p>
-        <p>软件工程 - 本科</p>
-      </block-wrapper>
-
-
-      <icon-list
-        :list="contacts"
-        class="icon-list"
-      />
+      <div class="online-link">
+        <h3>在线简历地址</h3>
+        <a href="https://drinkeewu.github.io/resume/">
+          https://drinkeewu.github.io/resume/
+        </a>
+      </div>
     </div>
+
+
+    <div class="resume-aside-bottom" />
   </div>
 </template>
 
@@ -113,9 +114,20 @@ export default {
 
       ],
       contacts: [
-        { icon: 'emailalt', text: 'drinkeewu@foxmail.com' },
-        { icon: 'phone', text: '13202481990' },
-        { icon: 'github', text: 'github.com/drinkeewu' },
+        {
+          icon: 'emailalt',
+          text: 'drinkeewu@foxmail.com',
+          linkType: 'mailto',
+        },
+        {
+          icon: 'phone',
+          text: '13202481990',
+          linkType: 'tel',
+        },
+        {
+          icon: 'github',
+          text: 'https://github.com/drinkeewu',
+        },
       ],
       works: [
         {
@@ -190,6 +202,10 @@ ul {
     }
   }
   @media screen and (max-width: 1049px) {
+    padding-top: 80px;
+    .online-link {
+      display: none;
+    }
   }
 }
 </style>

@@ -6,6 +6,7 @@
       :text="item.text"
       :icon="item.icon"
       :color="color"
+      :link-type="item.linkType"
     />
   </div>
 </template>

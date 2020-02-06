@@ -14,6 +14,10 @@
         </p>
         <p>男 / 1994.12</p>
       </div>
+      <icon-list
+        :list="contacts"
+        class="icon-list"
+      />
       <block-wrapper
         id="edu"
         title="教育背景"
@@ -28,10 +32,7 @@
       </block-wrapper>
 
       <progress-list :data="skills" />
-      <icon-list
-        :list="contacts"
-        class="icon-list"
-      />
+
 
       <block-wrapper
         id="evalution"
@@ -166,6 +167,9 @@ ul {
   box-sizing: border-box;
   text-align: center;
   background-color: $bg;
+  .icon-list {
+    margin-left: 30px;
+  }
   .work-year {
     padding: 0 10px;
     display: inline-block;
@@ -205,6 +209,9 @@ ul {
     padding-top: 80px;
     .online-link {
       display: none;
+    }
+    .icon-list {
+      margin-left: calc((100% - 240px) / 2);
     }
   }
 }

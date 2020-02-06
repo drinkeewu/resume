@@ -29,6 +29,12 @@
         </ul>
       </block-wrapper>
     </div>
+    <div>
+      <h3>在线简历地址</h3>
+      <a href="https://drinkeewu.github.io/resume/">
+        https://drinkeewu.github.io/resume/
+      </a>
+    </div>
 
     <div class="resume-aside-bottom">
       <block-wrapper
@@ -36,6 +42,11 @@
         title="工作经历"
         theme="dark"
       >
+        <span
+          class="work-year"
+        >
+          3年工作经验
+        </span>
         <div
           v-for="(work, wIndex) in works"
           :key="`work-exp${wIndex}`"
@@ -108,13 +119,13 @@ export default {
       ],
       works: [
         {
-          company: '广州柒盼网络科技有限公司(趣地接)',
+          company: '广州柒盼网络科技有限公司',
           date: '2017.7 - 2018.9',
           duty: '负责公司各个旅游PC/Wap平台产品的开发与维护、通用组件库的建设',
         },
         {
           company: '广东蔚海数问大数据科技有限公司',
-          date: '2018.11 - 2019.2',
+          date: '2018.11 - 至今',
           duty: '负责公司数据质量平台的前端开发工作、数据可视化公共组件库的建设、技术规范设计及技术文档的撰写',
         },
       ],
@@ -143,6 +154,15 @@ ul {
   box-sizing: border-box;
   text-align: center;
   background-color: $bg;
+  .work-year {
+    padding: 0 10px;
+    display: inline-block;
+    background: #E3E6EE;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
   &-top {
     .avatar {
       width: 240px;

@@ -21,14 +21,11 @@
         theme="dark"
       >
         <ul>
-          <li>善于根据需求提供合适的技术解决方案</li>
-          <li>乐于钻研学习新技术, 时刻关注行业动态拓展视野</li>
-          <li>拥有清晰的产品思维和较强的沟通能力, 能与团队合作融洽。</li>
-          <li>
-            良好的编码习惯, 熟练使用
-            <em>Eslint</em>、<em>commitizen</em>
-            等代码规范工具
-          </li>
+          <li
+            v-for="(comment, commentIndex) in comments"
+            :key="`comment${commentIndex}`"
+            v-html="comment"
+          />
         </ul>
       </block-wrapper>
     </div>
@@ -47,8 +44,10 @@
           <p class="work-exp__company">
             {{ work.company }}
           </p>
-          <p>{{ work.date }}</p>
-          <p>{{ work.duty }}</p>
+          <p class="font-bold">
+            {{ work.date }}
+          </p>
+          <p>工作内容：{{ work.duty }}</p>
         </div>
       </block-wrapper>
 
@@ -92,21 +91,31 @@ export default {
         { name: 'React', value: 75 },
         { name: 'TypeScript', value: 70 },
       ],
+      comments: [
+        '善于根据需求提供合适的技术解决方案',
+        '乐于钻研学习新技术, 时刻关注行业动态拓展视野',
+        '拥有清晰的产品思维和较强的沟通能力, 能与团队合作融洽。',
+        '良好的编码习惯, 熟练使用<em>Eslint</em>、<em>commitizen</em> 等代码规范工具',
+        '熟悉使用<em>Vue</em>、<em>React</em> 等MV* 框架；熟悉使用<em>Taro</em> 进行小程序开发',
+        '熟悉使用<em>Echarts</em> 进行数据可视化开发',
+        '了解<em>单元测试</em>与<em>travis-ci</em>自动化部署, 具有<em>npm</em>组件库开发经验',
+
+      ],
       contacts: [
         { icon: 'emailalt', text: 'drinkeewu@foxmail.com' },
-        { icon: 'phone', text: '13200000000' },
+        { icon: 'phone', text: '13202481990' },
         { icon: 'github', text: 'github.com/drinkeewu' },
       ],
       works: [
         {
           company: '广州柒盼网络科技有限公司(趣地接)',
           date: '2017.7 - 2018.9',
-          duty: '公司产品前端开发及维护、页面交互设计',
+          duty: '负责公司各个旅游PC/Wap平台产品的开发与维护、通用组件库的建设',
         },
         {
           company: '广东蔚海数问大数据科技有限公司',
           date: '2018.11 - 2019.2',
-          duty: '公司产品开发及维护、组件库开发、技术规范设计',
+          duty: '负责公司数据质量平台的前端开发工作、数据可视化公共组件库的建设、技术规范设计及技术文档的撰写',
         },
       ],
     };
@@ -120,6 +129,9 @@ $bg: #f7f8fa;
 
 ul {
   padding-left: 20px;
+  li {
+    margin-bottom: 5px;
+  }
 }
 .resume-aside {
   flex: 3;

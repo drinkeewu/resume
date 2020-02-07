@@ -26,14 +26,8 @@
 </template>
 
 <script>
+import $ from 'jquery';
 import Clickoutside from '@/utils/clickoutside';
-
-// eslint-disable-next-line no-restricted-properties
-// const cubic = value => Math.pow(value, 3);
-// const easeInOutCubic = value => (value < 0.5
-// ? cubic(value * 2) / 2
-// : 1 - cubic((1 - value) * 2) / 2);
-
 
 export default {
   name: 'FixButton',
@@ -70,31 +64,10 @@ export default {
     scrollToTarget(target) {
       const container = document.documentElement;
       const targetEl = document.querySelector(target);
-      container.scrollTop = targetEl.offsetTop;
+      $(container).animate({
+        scrollTop: $(targetEl)[0].offsetTop,
+      });
 
-      // const el = document.documentElement;
-      // let targetEl;
-      // if (target) {
-      //   targetEl = document.querySelector(target);
-      //   if (!el) {
-      //     throw new Error(`target is not existed: ${target}`);
-      //   }
-      // }
-      // const beginTime = Date.now();
-      // const beginValue = el.scrollTop;
-      // console.log('begin', beginValue, el);
-      // const rAF = window.requestAnimationFrame || (func => setTimeout(func, 16));
-      // const frameFunc = () => {
-      //   const progress = (Date.now() - beginTime) / 500;
-      //   console.log('progress', progress);
-      //   if (progress < 1) {
-      //     el.scrollTop = beginValue * (1 - easeInOutCubic(progress));
-      //     rAF(frameFunc);
-      //   } else {
-      //     el.scrollTop = targetEl.offsetTop;
-      //   }
-      // };
-      // rAF(frameFunc);
       this.toggleDirShow(false);
     },
   },

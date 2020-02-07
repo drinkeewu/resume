@@ -32,7 +32,7 @@
 
 <script>
 import $ from 'jquery';
-import Clickoutside from '@/utils/clickoutside';
+import { Clickoutside } from '@/utils';
 
 export default {
   name: 'FixButton',
@@ -53,9 +53,7 @@ export default {
   },
   computed: {
     buttonIconClass() {
-      return `iconfont ${this.directoryShow
-        ? 'icon-arrow-down'
-        : 'icon-directory'}`;
+      return `iconfont ${this.directoryShow ? 'icon-arrow-down' : 'icon-directory'}`;
     },
   },
   methods: {
@@ -80,7 +78,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/common.scss';
+@import "../../styles/common.scss";
 @mixin box-shadow {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
 }
@@ -88,7 +86,6 @@ export default {
   color: #666;
   #fix-button {
     display: none;
-
     @media screen and (max-width: 1049px) {
       display: flex;
       justify-content: center;
@@ -108,6 +105,7 @@ export default {
 }
 
 #directory-box {
+  z-index: 5;
   position: fixed;
   right: 40px;
   bottom: 90px;
@@ -118,12 +116,20 @@ export default {
     line-height: 3;
     padding: 0 15px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     &.is-active {
       border-bottom: 2px solid $deep-blue;
     }
-    &:hover{
+    &:hover {
       outline: none;
-      background: rgba($color: $deep-blue, $alpha: .2);
+      background: rgba($color: $deep-blue, $alpha: 0.2);
+      color: $deep-blue;
+    }
+  }
+  @media screen and (max-width: 1049px) {
+    &:active {
+      outline: none;
+      background: rgba($color: $deep-blue, $alpha: 0.2);
       color: $deep-blue;
     }
   }
@@ -132,5 +138,4 @@ export default {
   -webkit-animation-duration: 200ms;
   animation-duration: 300ms;
 }
-
 </style>

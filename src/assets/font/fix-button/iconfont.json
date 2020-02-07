@@ -18,6 +18,13 @@
       "font_class": "arrow-down",
       "unicode": "e61a",
       "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "8530851",
+      "name": "下载",
+      "font_class": "download",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
     }
   ]
 }

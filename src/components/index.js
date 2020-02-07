@@ -1,4 +1,5 @@
 export { default as Flex } from './flex';
+export { default as PDFButton } from './pdf-button';
 export { default as FixButton } from './fix-button';
 export { default as TextSection } from './text-section';
 export { default as BlockWrapper } from './block-wrapper';

@@ -2,77 +2,86 @@
   <block-wrapper
     id="project"
     title="项目经验"
+    theme="dark"
   >
-    <text-section
-      v-for="(project, pIndex) in projects"
-      :key="`project${pIndex}`"
-      :title="project.title"
-    >
-      <template slot="title">
-        <flex
-          justify="space-between"
-          align="center"
-          wrap="wrap"
-        >
-          <div class="project-header">
-            <h1 class="project-title">
-              {{ project.title }}
-            </h1>
-            <span
-              v-if="project.time"
-              class="project-time"
-            >
-              {{ project.time.start }} - {{ project.time.end }}
-            </span>
-          </div>
-          <div
-            v-if="project.tags && project.tags.length > 0"
-            class="project-tag-wrapper"
+    <template v-for="(project, pIndex) in projects">
+      <block-wrapper
+        v-if="project.secondPage"
+        id="second-page-title"
+        :key="`${pIndex}-page-title`"
+        title="项目经验"
+        theme="dark"
+      />
+      <text-section
+        :key="`project${pIndex}`"
+        :title="project.title"
+      >
+        <template slot="title">
+          <flex
+            justify="space-between"
+            align="center"
+            wrap="wrap"
           >
-            <div
-              v-for="(tag, tagIndex) in project.tags"
-              :key="`${pIndex}-tag${tagIndex}`"
-              class="project-tag"
-            >
-              {{ tag }}
+            <div class="project-header">
+              <h1 class="project-title">
+                {{ project.title }}
+              </h1>
+              <span
+                v-if="project.time"
+                class="project-time"
+              >
+                {{ project.time.start }} - {{ project.time.end }}
+              </span>
             </div>
-          </div>
-        </flex>
-      </template>
-      <p>
-        <span class="title">
-          主要技术栈:
-        </span>
-        <template v-for="(tech, techIndex) in project.techs">
-          <em :key="`${pIndex}-tech-${techIndex}`">
-            {{ tech }}
-          </em>
-          {{ !isLastOf(project.techs, techIndex) ? "、" : "" }}
+            <div
+              v-if="project.tags && project.tags.length > 0"
+              class="project-tag-wrapper"
+            >
+              <div
+                v-for="(tag, tagIndex) in project.tags"
+                :key="`${pIndex}-tag${tagIndex}`"
+                class="project-tag"
+              >
+                {{ tag }}
+              </div>
+            </div>
+          </flex>
         </template>
-      </p>
-      <p>
-        <span class="title">
-          项目职责:
-        </span>
-        <template v-for="(duty, dIndex) in project.dutys">
-          <span :key="`${pIndex}-duty${dIndex}`">
-            <span v-html="duty" />
-            {{ !isLastOf(project.dutys, dIndex) ? "、" : "" }}
+        <p>
+          <span class="title">
+            主要技术栈:
           </span>
-        </template>
-      </p>
+          <template v-for="(tech, techIndex) in project.techs">
+            <em :key="`${pIndex}-tech-${techIndex}`">
+              {{ tech }}
+            </em>
+            {{ !isLastOf(project.techs, techIndex) ? "、" : "" }}
+          </template>
+        </p>
+        <p>
+          <span class="title">
+            项目职责:
+          </span>
+          <template v-for="(duty, dIndex) in project.dutys">
+            <span :key="`${pIndex}-duty${dIndex}`">
+              <span v-html="duty" />
+              {{ !isLastOf(project.dutys, dIndex) ? "、" : "" }}
+            </span>
+          </template>
+        </p>
 
-      <p class="title">
-        项目描述:
-      </p>
-      <ul>
-        <li
-          v-for="(feature, fIndex) in project.features"
-          :key="`${pIndex}-row-${fIndex}}`"
-          v-html="feature"
-        />
-      </ul>
-    </text-section>
+        <p class="title">
+          项目描述:
+        </p>
+        <ul>
+          <li
+            v-for="(feature, fIndex) in project.features"
+            :key="`${pIndex}-row-${fIndex}}`"
+            v-html="feature"
+          />
+        </ul>
+      </text-section>
+    </template>
   </block-wrapper>
 </template>
 
@@ -154,6 +163,21 @@ export default {
           tags: ['数据检测与治理'],
         },
         {
+          title: 'Echarts图表组件库',
+          time: {
+            start: '2019.5',
+            end: '2019.8',
+          },
+          tags: ['图表组件库'],
+          techs: ['VueJs', 'Echarts', 'npm'],
+          dutys: ['组件库项目的架构', '使用文档撰写', '组件开发规范设计'],
+          features: [
+            '根据过往项目开发过程中总结的使用场景, 对常用 <em>Echart</em> 组件进行二次封装并部署到 <em>npm</em> 服务器',
+            '该组件库被广泛应用到公司项目开发中, 大幅度提高了数据可视化的开发效率, 减少重复造轮子',
+          ],
+        },
+        {
+          secondPage: true,
           title: '智慧教育数据平台',
           time: {
             start: '2019.6',
@@ -188,20 +212,7 @@ export default {
             '嵌入到公司部分具有重叠的项目中, 减少重复开发带来的时间成本和人力成本',
           ],
         },
-        {
-          title: 'Echarts图表组件库',
-          time: {
-            start: '2019.5',
-            end: '2019.7',
-          },
-          tags: ['图表组件库'],
-          techs: ['VueJs', 'Echarts', 'npm'],
-          dutys: ['组件库项目的架构', '使用文档撰写', '组件开发规范设计'],
-          features: [
-            '根据过往项目开发过程中总结的使用场景, 对常用 <em>Echart</em> 组件进行二次封装并部署到 <em>npm</em> 服务器',
-            '该组件库被广泛应用到公司项目开发中, 大幅度提高了数据可视化的开发效率, 减少重复造轮子',
-          ],
-        },
+
         {
           title: '监所资源整合平台',
           time: {
@@ -244,6 +255,10 @@ ul li {
     color: $deep-blue;
     display: inline-block;
   }
+}
+#second-page-title{
+  padding-top: 100px;
+  display: none;
 }
 .title {
   color: $deep-blue;

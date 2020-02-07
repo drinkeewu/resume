@@ -38,7 +38,7 @@ export default {
 
 <style scoped lang="scss">
 .comp-progress-list {
-  padding: 15px 0;
+  // padding: 15px 0;
 }
 
 </style>

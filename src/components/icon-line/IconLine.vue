@@ -61,6 +61,11 @@ export default {
   }
   .text {
     margin-left: 10px;
+    &:hover{
+      a{
+        opacity: .7;
+      }
+    }
   }
 
 }

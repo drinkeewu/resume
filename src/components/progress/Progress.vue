@@ -77,7 +77,7 @@ export default {
   // align-items: center;
   margin-top: 2px;
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 16px;
   &-name {
     padding-left: 5px;

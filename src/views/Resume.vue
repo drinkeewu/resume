@@ -3,18 +3,22 @@
     id="base"
     class="resume-page"
   >
-    <div class="resume-page__center">
+    <div
+      id="pdf"
+      class="resume-page__center"
+    >
       <r-aside />
       <r-content />
     </div>
     <fix-button />
+    <pdf-button />
   </div>
 </template>
 
 <script>
 import Aside from '@/views/aside';
 import Content from '@/views/content';
-import { FixButton } from '@/components';
+import { FixButton, PDFButton } from '@/components';
 
 
 export default {
@@ -23,6 +27,7 @@ export default {
     'r-aside': Aside,
     'r-content': Content,
     'fix-button': FixButton,
+    'pdf-button': PDFButton,
   },
   data() {
     return {
@@ -30,10 +35,12 @@ export default {
     };
   },
 
+
 };
 </script>
 
 <style lang="scss" scoped>
+@import '../../src/styles/common.scss';
 .resume-page {
   display: flex;
   flex-direction: column;
@@ -47,9 +54,11 @@ export default {
     flex:1;
     display:flex;
   }
+
   @media screen and (max-width: 1049px){
     margin: 0;
     width: 100%;
+
     &__center{
       display: block;
     }

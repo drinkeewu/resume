@@ -9,19 +9,24 @@
     >
       <i :class="buttonIconClass" />
     </div>
-    <div
-      v-show="directoryShow"
-      id="directory-box"
+    <transition
+      enter-active-class="animated fadeInUp fastest"
+      leave-active-class="animated fadeOutDown fastest"
     >
       <div
-        v-for="(dir, dIndex) in directories"
-        :key="`dir${dIndex}}`"
-        class="directory-item"
-        @click="scrollToTarget(dir.target)"
+        v-show="directoryShow"
+        id="directory-box"
       >
-        {{ dir.name }}
+        <div
+          v-for="(dir, dIndex) in directories"
+          :key="`dir${dIndex}}`"
+          class="directory-item"
+          @click="scrollToTarget(dir.target)"
+        >
+          {{ dir.name }}
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -123,4 +128,9 @@ export default {
     }
   }
 }
+.animated.fastest {
+  -webkit-animation-duration: 200ms;
+  animation-duration: 300ms;
+}
+
 </style>

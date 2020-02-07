@@ -11,7 +11,18 @@
         :key="`${pIndex}-page-title`"
         title="项目经验"
         theme="dark"
-      />
+      >
+        <p class="project-company seconde-page-company">
+          {{ project.company }}
+        </p>
+      </block-wrapper>
+      <p
+        v-if="project.company && !project.secondPage"
+        :key="`company-${pIndex}`"
+        class="project-company"
+      >
+        {{ project.company }}
+      </p>
       <text-section
         :key="`project${pIndex}`"
         :title="project.title"
@@ -98,6 +109,7 @@ export default {
     return {
       projects: [
         {
+          company: '广州柒盼网络科技有限公司 - 项目',
           title: 'Treep趣地接',
           time: {
             start: '2017.8',
@@ -144,6 +156,7 @@ export default {
           tags: ['定制化微商城'],
         },
         {
+          company: '广州蔚海数问大数据科技有限公司 - 项目',
           title: '数据质量平台',
           time: {
             start: '2018.11',
@@ -179,6 +192,7 @@ export default {
         {
           secondPage: true,
           title: '智慧教育数据平台',
+          company: '广州蔚海数问大数据科技有限公司 - 项目',
           time: {
             start: '2019.6',
             end: '2019.12',
@@ -257,11 +271,16 @@ ul li {
   }
 }
 #second-page-title{
-  padding-top: 100px;
+  padding-top: 60px;
   display: none;
 }
 .title {
   color: $deep-blue;
+  font-weight: bold;
+}
+.project-company {
+  text-align: center;
+  color: #333;
   font-weight: bold;
 }
 .project-header {

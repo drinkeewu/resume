@@ -25,7 +25,7 @@ export default {
       if (isSupportDownload) {
         const href = `${isDevelop ? '' : '/resume'}/pdf/resume.pdf`;
         a.setAttribute('href', href);
-        a.setAttribute('download', '简历 | 吴俊杰 - 前端工程师.pdf');
+        a.setAttribute('download', '简历 | 吴俊杰 - 前端工程师 - 3年工作经验.pdf');
         a.click();
       }
     },

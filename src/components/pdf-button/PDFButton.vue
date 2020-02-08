@@ -35,9 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../styles/common.scss';
-import { isDevelop } from '@/common';
 .pdf-button {
-  // z-index: 1;
   position: fixed;
   line-height: 3;
   right: 40px;

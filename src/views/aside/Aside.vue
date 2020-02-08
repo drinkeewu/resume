@@ -109,7 +109,7 @@ export default {
         '良好的编码习惯, 熟练使用<em>Eslint</em>、<em>commitizen</em>、<em>TypeScript</em> 等工具规范代码',
         '掌握<em>Vue</em>、<em>React</em> 等MV* 框架；熟悉使用<em>Taro</em> 进行小程序开发',
         '熟悉使用<em>Echarts</em> 进行数据可视化开发',
-        '了解<em>单元测试</em>与<em>travis-ci</em>自动化部署, 具有<em>npm</em>组件库开发经验',
+        '熟悉<em>单元测试</em>与<em>travis-ci</em>自动化部署, 具有<em>npm</em>组件库开发经验',
 
       ],
       contacts: [

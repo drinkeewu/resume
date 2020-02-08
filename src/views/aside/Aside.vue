@@ -42,7 +42,6 @@
         </div>
       </block-wrapper>
 
-      <progress-list :data="skills" />
 
       <block-wrapper
         id="evalution"
@@ -76,6 +75,14 @@
           <p>工作内容：{{ work.duty }}</p>
         </div>
       </block-wrapper>
+      <block-wrapper
+        id="skill"
+        theme="dark"
+        title="专业技能"
+        class="skill-level"
+      >
+        <progress-list :data="skills" />
+      </block-wrapper>
     </div>
 
 
@@ -102,9 +109,13 @@ export default {
         { name: 'Vue', value: 90 },
         { name: 'React', value: 75 },
         { name: 'TypeScript', value: 70 },
+        { name: 'CSS / Sass / Less', value: 80 },
+        { name: 'Git', value: 80 },
+        { name: 'Webpack', value: 70 },
+        { name: 'Mocha / Karma', value: 60 },
       ],
       comments: [
-        '善于根据需求提供合适的技术解决方案, 拥有清晰的产品思维和较强的沟通能力, 能与团队合作融洽。',
+        '善于根据需求提供合适的技术解决方案、使用各种工具提高生产力, 拥有清晰的产品思维和较强的沟通能力, 能与团队合作融洽。',
         '良好的<em>JavaScript</em> / <em>ES6+</em> 基础; 乐于钻研学习新技术, 时刻关注行业动态拓展视野',
         '良好的编码习惯, 熟练使用<em>Eslint</em>、<em>commitizen</em>、<em>TypeScript</em> 等工具规范代码',
         '掌握<em>Vue</em>、<em>React</em> 等MV* 框架；熟悉使用<em>Taro</em> 进行小程序开发',

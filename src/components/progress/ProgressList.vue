@@ -6,6 +6,7 @@
       :name="item.name"
       :value="item.value"
       :name-width="nameMaxWidth"
+      height="15px"
     />
   </div>
 </template>

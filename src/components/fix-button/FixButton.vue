@@ -46,6 +46,7 @@ export default {
         { name: '教育背景', target: '#edu' },
         { name: '个人评价', target: '#evalution' },
         { name: '工作经历', target: '#work' },
+        { name: '专业技能', target: '#skill' },
         { name: '项目经验', target: '#project' },
       ],
       activeDir: 'base',

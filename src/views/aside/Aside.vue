@@ -110,7 +110,7 @@ export default {
         { name: 'React', value: 75 },
         { name: 'TypeScript', value: 70 },
         { name: 'CSS / Sass / Less', value: 80 },
-        { name: 'Git', value: 80 },
+        { name: 'Git / Svn', value: 80 },
         { name: 'Webpack', value: 70 },
         { name: 'Mocha / Karma', value: 60 },
       ],

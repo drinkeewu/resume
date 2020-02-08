@@ -105,7 +105,7 @@ export default {
       ],
       comments: [
         '善于根据需求提供合适的技术解决方案, 拥有清晰的产品思维和较强的沟通能力, 能与团队合作融洽。',
-        '良好的<em>JavaScript</em> / <em>ES6+</em> 基础乐于钻研学习新技术, 时刻关注行业动态拓展视野',
+        '良好的<em>JavaScript</em> / <em>ES6+</em> 基础; 乐于钻研学习新技术, 时刻关注行业动态拓展视野',
         '良好的编码习惯, 熟练使用<em>Eslint</em>、<em>commitizen</em>、<em>TypeScript</em> 等工具规范代码',
         '掌握<em>Vue</em>、<em>React</em> 等MV* 框架；熟悉使用<em>Taro</em> 进行小程序开发',
         '熟悉使用<em>Echarts</em> 进行数据可视化开发',

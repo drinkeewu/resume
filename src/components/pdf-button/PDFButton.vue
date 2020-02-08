@@ -14,15 +14,17 @@
 </template>
 
 <script>
+import { isDevelop } from '@/common';
+
 export default {
   name: 'PDFButton',
   methods: {
     handleGetPDF() {
       const a = document.createElement('a');
-      a.href = '/pdf/resume.pdf';
       const isSupportDownload = 'download' in a;
       if (isSupportDownload) {
-        a.setAttribute('href', '/pdf/resume.pdf');
+        const href = `${isDevelop ? '' : '/resume'}/pdf/resume.pdf`;
+        a.setAttribute('href', href);
         a.setAttribute('download', '简历 | 吴俊杰 - 前端工程师.pdf');
         a.click();
       }
@@ -33,6 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../styles/common.scss';
+import { isDevelop } from '@/common';
 .pdf-button {
   // z-index: 1;
   position: fixed;

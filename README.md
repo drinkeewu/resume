@@ -13,3 +13,4 @@
 
 ![](https://raw.githubusercontent.com/drinkeewu/resume/dev/preview.png)
 
+Fork或者借鉴请注明出处[@drinkeewu](https://github.com/drinkeewu/resume)

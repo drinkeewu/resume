@@ -14,6 +14,7 @@
      margin: 0 !important;
    }
    .resume-aside {
+     position: relative;
      height: 2970px;
    }
    #pdf-button {
@@ -31,8 +32,10 @@
      height: 10px !important;
      margin-bottom: 5px;
     }
-    .skill-level {
-      padding-top: 260px;
+    #evalution{
+      /* position: absolute;
+      top:1485.0755px; */
+      /* padding-top: 260px; */
     }
     #second-page-title {
       display: block !important;

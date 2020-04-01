@@ -1,16 +1,19 @@
 <template>
   <div class="resume-content">
+    <work />
     <project />
   </div>
 </template>
 
 <script>
 import Project from './project';
+import Work from './work';
 
 export default {
   name: 'Content',
   components: {
-    project: Project,
+    Project,
+    Work,
   },
 };
 </script>

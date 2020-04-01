@@ -2,7 +2,7 @@
  * @Author: Drinkee 
  * @Date: 2020-02-07 17:39:35 
  * @Last Modified by: Drinkee
- * @Last Modified time: 2020-02-08 16:40:45
+ * @Last Modified time: 2020-03-31 13:23:46
  */
 
  @media print {
@@ -19,18 +19,24 @@
    #pdf-button {
      display: none;
    }
+   .more {
+    margin-top: 30px;
+     display: flex;
+   }
+   .more .more-text,
+   .more .more-icon {
+     display: block !important;
+   }
    .comp-progress-bar {
      height: 10px !important;
      margin-bottom: 5px;
     }
-    .comp-progress-list {
-      /* display: none; */
-    }
     .skill-level {
-      padding-top: 50px;
+      padding-top: 260px;
     }
     #second-page-title {
       display: block !important;
+      padding-top: 95px;
     }
  }
 

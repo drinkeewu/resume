@@ -92,18 +92,32 @@
           />
         </ul>
       </text-section>
+      <flex
+        v-if="pIndex === 2"
+        :key="`more${pIndex}`"
+        class="more"
+        justify="center"
+        direction="column"
+        align="center"
+      >
+        <span class="more-text">
+          More
+        </span>
+        <i class="el-icon-caret-bottom more-icon" />
+      </flex>
     </template>
   </block-wrapper>
 </template>
 
 <script>
-import { BlockWrapper, TextSection } from '@/components';
+import { BlockWrapper, TextSection, Flex } from '@/components';
 
 export default {
   name: 'Project',
   components: {
-    'block-wrapper': BlockWrapper,
-    'text-section': TextSection,
+    BlockWrapper,
+    TextSection,
+    Flex,
   },
   data() {
     return {
@@ -155,8 +169,10 @@ export default {
           ],
           tags: ['定制化微商城'],
         },
+
         {
           company: '广州蔚海数问大数据科技有限公司 - 项目',
+          secondPage: true,
           title: '数据质量平台',
           time: {
             start: '2018.11',
@@ -190,9 +206,7 @@ export default {
           ],
         },
         {
-          secondPage: true,
           title: '智慧教育数据平台',
-          company: '广州蔚海数问大数据科技有限公司 - 项目',
           time: {
             start: '2019.6',
             end: '2019.12',
@@ -241,6 +255,7 @@ export default {
             '帮助公安机关整合内部数据资源, 对技术接口进行权限管理。',
           ],
         },
+
       ],
     };
   },
@@ -271,8 +286,16 @@ ul li {
   }
 }
 #second-page-title{
-  padding-top: 60px;
   display: none;
+}
+.more {
+  color: $deep-blue;
+  &-text,
+  &-icon {
+    display: none;
+    font-weight: bold;
+    font-size: 18px;
+  }
 }
 .title {
   color: $deep-blue;

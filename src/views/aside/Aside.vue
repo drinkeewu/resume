@@ -56,25 +56,7 @@
           />
         </ul>
       </block-wrapper>
-      <block-wrapper
-        id="work"
-        title="工作经历"
-        theme="dark"
-      >
-        <div
-          v-for="(work, wIndex) in works"
-          :key="`work-exp${wIndex}`"
-          class="work-exp"
-        >
-          <p class="work-exp__company">
-            {{ work.company }}
-          </p>
-          <p class="font-bold">
-            {{ work.date }}
-          </p>
-          <p>工作内容：{{ work.duty }}</p>
-        </div>
-      </block-wrapper>
+
       <block-wrapper
         id="skill"
         theme="dark"
@@ -94,6 +76,7 @@
 import {
   ProgressList, IconLineList, BlockWrapper,
 } from '@/components';
+
 
 export default {
   name: 'Aside',
@@ -116,11 +99,12 @@ export default {
       ],
       comments: [
         '善于根据需求提供合适的技术解决方案、使用各种工具提高生产力, 拥有清晰的产品思维和较强的沟通能力, 能与团队合作融洽。',
-        '良好的<em>JavaScript</em> / <em>ES6+</em> 基础; 乐于钻研学习新技术, 时刻关注行业动态拓展视野',
-        '良好的编码习惯, 熟练使用<em>Eslint</em>、<em>commitizen</em>、<em>TypeScript</em> 等工具规范代码',
-        '掌握<em>Vue</em>、<em>React</em> 等MV* 框架；熟悉使用<em>Taro</em> 进行小程序开发',
-        '熟悉使用<em>Echarts</em> 进行数据可视化开发',
-        '拥有<em>单元测试</em>与<em>travis-ci</em>自动化部署实践经验, 具有<em>npm</em>组件库开发经验',
+        '良好的JavaScript / ES6+ 基础; 乐于钻研学习新技术, 时刻关注行业动态拓展视野',
+        '良好的编码习惯, 熟练使用Eslint、commitizen、TypeScript 等工具规范代码',
+        '掌握Vue、React 等MV* 框架及其配套工具(路由、状态管理), 并了解其实现原理；熟悉使用Taro 进行小程序开发, 了解RN, uni-app等跨端开发框架',
+        '熟悉HTTP/TCP、浏览器工作原理以及跨域解决方案; 了解性能优化',
+        '熟悉使用Echarts 进行数据可视化开发, 了解Canvas API的使用',
+        '拥有单元测试与自动化部署实践经验; 有公共组件库开发经验, 开发并主导过多个大型项目',
 
       ],
       contacts: [
@@ -139,18 +123,7 @@ export default {
           text: 'https://github.com/drinkeewu',
         },
       ],
-      works: [
-        {
-          company: '广州柒盼网络科技有限公司',
-          date: '2017.7 - 2018.9',
-          duty: '负责公司各个旅游PC/Wap平台产品的开发与维护、通用组件库的建设',
-        },
-        {
-          company: '广东蔚海数问大数据科技有限公司',
-          date: '2018.11 - 至今',
-          duty: '负责公司数据质量平台的前端开发工作、数据可视化公共组件库的建设、技术规范设计及技术文档的撰写',
-        },
-      ],
+
     };
   },
 };
@@ -213,14 +186,7 @@ ul {
       }
     }
   }
-  .work-exp {
-    &__company {
-      font-size: 16px;
-      font-weight: bold;
-      color: $deep-blue;
 
-    }
-  }
   @media screen and (max-width: 1049px) {
     padding-top: 80px;
     .online-link {

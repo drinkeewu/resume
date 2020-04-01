@@ -41,8 +41,22 @@
           <p>软件工程 - 本科</p>
         </div>
       </block-wrapper>
-
-
+      <!-- 技能水平 -->
+      <block-wrapper
+        id="skill"
+        theme="dark"
+        title="技能水平"
+        class="skill-level"
+      >
+        <ul>
+          <li
+            v-for="(skill, skillIndex) in skills"
+            :key="`skill${skillIndex}`"
+            v-html="skill"
+          />
+        </ul>
+      </block-wrapper>
+      <!-- 个人评价 -->
       <block-wrapper
         id="evalution"
         title="个人评价"
@@ -56,15 +70,6 @@
           />
         </ul>
       </block-wrapper>
-
-      <block-wrapper
-        id="skill"
-        theme="dark"
-        title="专业技能"
-        class="skill-level"
-      >
-        <progress-list :data="skills" />
-      </block-wrapper>
     </div>
 
 
@@ -74,38 +79,33 @@
 
 <script>
 import {
-  ProgressList, IconLineList, BlockWrapper,
+  IconLineList, BlockWrapper,
 } from '@/components';
 
 
 export default {
   name: 'Aside',
   components: {
-    'progress-list': ProgressList,
     'icon-list': IconLineList,
     'block-wrapper': BlockWrapper,
   },
   data() {
     return {
       skills: [
-        { name: 'JavaScript / ES 6+', value: 90 },
-        { name: 'Vue', value: 90 },
-        { name: 'React', value: 75 },
-        { name: 'TypeScript', value: 70 },
-        { name: 'CSS / Sass / Less', value: 80 },
-        { name: 'Git / Svn', value: 80 },
-        { name: 'Webpack', value: 70 },
-        { name: 'Mocha / Karma', value: 60 },
+        '扎实的JavaScript基础, 熟悉ES6+ 新特性',
+        '熟悉Sass、Less等css预处理库',
+        '掌握Vue.js (vuex/vue-router), 并理解其实现原理; 熟悉React(react-router/redux/dva)等MV*框架, 且拥有实际开发经验',
+        '熟悉使用Echarts进行数据可视化开发, 了解Canvas API',
+        '熟练使用Eslint、commitizen、TypeScript等工具规范代码',
+        '理解前端工程化, 熟悉项目脚手架及Webpack常用配置; 熟悉git、svn代码协作工具',
+        '熟悉HTTP、TCP/IP; 熟悉常用跨域解决方案; 了解浏览器工作原理、前端性能优化',
+        '熟悉使用Taro框架进行小程序开发, 了解小程序原生API; 了解React Native、Flutter、uni-app等跨段框架',
+        '了解Mocha、Karma等单元测试框架',
       ],
       comments: [
-        '善于根据需求提供合适的技术解决方案、使用各种工具提高生产力, 拥有清晰的产品思维和较强的沟通能力, 能与团队合作融洽。',
-        '良好的JavaScript / ES6+ 基础; 乐于钻研学习新技术, 时刻关注行业动态拓展视野',
-        '良好的编码习惯, 熟练使用Eslint、commitizen、TypeScript 等工具规范代码',
-        '掌握Vue、React 等MV* 框架及其配套工具(路由、状态管理), 并了解其实现原理；熟悉使用Taro 进行小程序开发, 了解RN, uni-app等跨端开发框架',
-        '熟悉HTTP/TCP、浏览器工作原理以及跨域解决方案; 了解性能优化',
-        '熟悉使用Echarts 进行数据可视化开发, 了解Canvas API的使用',
-        '拥有单元测试与自动化部署实践经验; 有公共组件库开发经验, 开发并主导过多个大型项目',
-
+        '拥有良好的代码编写习惯、清晰的产品思维、良好的业务理解能力、沟通能力和团队协作能力。',
+        '较强的自我驱动学习能力, 乐于钻研学习新技术, 时刻关注行业动态拓展视野',
+        '有公共组件库开发经验, 开发并主导过多个大型项目; 拥有自动化部署实践经验',
       ],
       contacts: [
         {
@@ -169,8 +169,8 @@ ul {
   }
   &-top {
     .avatar {
-      width: 240px;
-      height: 240px;
+      width: 220px;
+      height: 220px;
       background-color: rgba($color: #6accfa, $alpha: 0.5);
       border-radius: 50%;
       overflow: hidden;

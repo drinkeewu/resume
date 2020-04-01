@@ -44,8 +44,8 @@ export default {
       directories: [
         { name: '基本信息', target: '#base' },
         { name: '教育背景', target: '#edu' },
+        { name: '技能水平', target: '#skill' },
         { name: '个人评价', target: '#evalution' },
-        { name: '专业技能', target: '#skill' },
         { name: '工作经历', target: '#work' },
         { name: '项目经验', target: '#project' },
       ],

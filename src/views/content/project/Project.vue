@@ -73,6 +73,9 @@
           <span class="title">
             项目职责:
           </span>
+          <strong>
+            {{ project.role }}
+          </strong>，
           <template v-for="(duty, dIndex) in project.dutys">
             <span :key="`${pIndex}-duty${dIndex}`">
               <span v-html="duty" />
@@ -125,6 +128,7 @@ export default {
         {
           company: '广州柒盼网络科技有限公司 - 项目',
           title: 'Treep趣地接',
+          role: '组员',
           time: {
             start: '2017.8',
             end: '2018.9',
@@ -145,6 +149,7 @@ export default {
             start: '2017.8',
             end: '2018.9',
           },
+          role: '核心开发人员',
           techs: ['VueJs', 'ElementUI', 'axios'],
           features: [
             '与Treep平台打通, 整合旅游项目、酒店、订单、包团产品等供应链信息',
@@ -160,10 +165,11 @@ export default {
             start: '2018.1',
             end: '2018.3',
           },
+          role: '独立开发',
           techs: ['VueJs', 'ElementUI', 'VantUI', 'axios'],
           dutys: ['PC、Wap前端开发', '多语言切换模块开发'],
           features: [
-            '针对不同的旅行社商户进行定制化开发, 为商户提供实现产品展示和定制化购买, 订单管理的轻量级商城平台',
+            '针对不同的旅行社商户进行定制化开发的, 为商户提供实现产品展示和定制化购买, 订单管理的轻量级商城平台',
             '服务于数十家商户, 并成功帮助商户提高业绩',
             'PC端、Wap端支持、多语言支持',
           ],
@@ -178,6 +184,7 @@ export default {
             start: '2018.11',
             end: '2019.5',
           },
+          role: '独立开发',
           techs: ['VueJs', 'Echarts', 'ElementUI', 'axios'],
           features: [
             '对源数据进行汇聚、抽样、检测及清洗修复',
@@ -193,6 +200,7 @@ export default {
         },
         {
           title: 'Echarts图表组件库',
+          role: '主导者、核心开发人员',
           time: {
             start: '2019.5',
             end: '2019.8',
@@ -207,6 +215,7 @@ export default {
         },
         {
           title: '智慧教育数据平台',
+          role: '核心开发成员',
           time: {
             start: '2019.6',
             end: '2019.12',
@@ -225,6 +234,7 @@ export default {
         },
         {
           title: '羿+自助分析平台',
+          role: '核心开发人员',
           time: {
             start: '2018.11',
             end: '2019.12',
@@ -243,6 +253,7 @@ export default {
 
         {
           title: '监所资源整合平台',
+          role: '组员',
           time: {
             start: '2019.10',
             end: '2019.12',

@@ -22,7 +22,7 @@ export default {
 .resume-content {
   flex-shrink: 0;
   flex: 6;
-  padding: 20px 30px;
+  padding: 35px 30px 20px 30px;
   box-sizing: border-box;
   background: #fff;
   @media screen and (max-width: 1049px){

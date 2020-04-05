@@ -34,12 +34,14 @@
     }
     #evalution{
       /* position: absolute;
-      top:1485.0755px; */
+      top:1515.0755px;
+      left: 40px;
+      right: 40px; */
       /* padding-top: 260px; */
     }
     #second-page-title {
       display: block !important;
-      padding-top: 95px;
+      padding-top: 110px;
     }
  }
 

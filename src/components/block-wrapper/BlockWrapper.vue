@@ -43,7 +43,7 @@ export default {
 @mixin split-line {
   position: absolute;
   display: block;
-  top: 36px;
+  top: 26px;
   content: "";
   background: #f6f6f6;
   height: 2px;
@@ -57,7 +57,7 @@ export default {
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 15px 0;
+    padding: 5px 0;
     &:before {
       left: 0;
       @include split-line();

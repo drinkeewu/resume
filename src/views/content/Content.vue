@@ -26,7 +26,7 @@ export default {
   box-sizing: border-box;
   background: #fff;
   @media screen and (max-width: 1049px){
-    padding-bottom: 80px;
+    padding-bottom: 150px;
   }
 }
 </style>

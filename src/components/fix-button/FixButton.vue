@@ -69,7 +69,7 @@ export default {
       const container = document.documentElement;
       const targetEl = document.querySelector(target);
       $(container).animate({
-        scrollTop: $(targetEl)[0].offsetTop - 10,
+        scrollTop: $(targetEl)[0].offsetTop - 5,
       });
 
       this.toggleDirShow(false);

@@ -94,7 +94,7 @@ export default {
       skills: [
         '扎实的JavaScript基础, 熟悉ES6+ 新特性',
         '熟悉Sass、Less等css预处理库',
-        '掌握Vue.js (vuex/vue-router), 并理解其实现原理; 熟悉React(react-router/redux/dva)等MV*框架, 且拥有实际开发经验',
+        '掌握Vue.js (vuex/vue-router), 并理解其实现原理; 了解React.js(hooks/react-router/redux/dva), 并拥有实际开发经验',
         '熟悉使用Echarts进行数据可视化开发, 了解Canvas API',
         '熟练使用Eslint、commitizen、TypeScript等工具规范代码',
         '理解前端工程化, 熟悉项目脚手架及Webpack常用配置; 熟悉git、svn代码协作工具',
@@ -103,9 +103,9 @@ export default {
         '了解Mocha、Karma等单元测试框架',
       ],
       comments: [
+        '拥有公共组件库开发经验, 主导并开发过多个大型项目; 拥有自动化部署实践经验',
         '拥有良好的代码编写习惯、清晰的产品思维、良好的业务理解能力、沟通能力和团队协作能力。',
         '较强的自我驱动学习能力, 乐于钻研学习新技术, 时刻关注行业动态拓展视野',
-        '有公共组件库开发经验, 开发并主导过多个大型项目; 拥有自动化部署实践经验',
       ],
       contacts: [
         {
@@ -150,6 +150,7 @@ ul {
   text-align: center;
   background-color: $bg;
   .online-link {
+    margin-bottom: 10px;
     h3 {
       margin: 5px 0;
     }

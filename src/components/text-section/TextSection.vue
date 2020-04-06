@@ -46,7 +46,7 @@ export default {
 <style  lang="scss">
 @import '../../styles/common.scss';
 .comp-text-section {
-  margin: 15px 0;
+  margin: 5px 0;
   text-align: left;
   &__title {
     h1 {

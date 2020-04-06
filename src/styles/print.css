@@ -22,11 +22,11 @@
    }
    .more {
     margin-top: 30px;
-     display: flex;
+     /* display: flex; */
    }
    .more .more-text,
    .more .more-icon {
-     display: block !important;
+     /* display: block !important; */
    }
    .comp-progress-bar {
      height: 10px !important;
@@ -41,7 +41,7 @@
     }
     #second-page-title {
       display: block !important;
-      padding-top: 110px;
+      /* padding-top: 110px; */
     }
  }
 

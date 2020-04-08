@@ -99,7 +99,7 @@ export default {
         '熟练使用Eslint、commitizen、TypeScript等工具规范代码',
         '理解前端工程化, 熟悉项目脚手架及Webpack常用配置; 熟悉git、svn代码协作工具',
         '熟悉HTTP、TCP/IP; 熟悉常用跨域解决方案; 了解浏览器工作原理、前端性能优化',
-        '熟悉使用Taro框架进行小程序开发, 了解小程序原生API; 了解React Native、Flutter、uni-app等跨段框架',
+        '熟悉使用Taro框架进行小程序开发, 了解小程序原生API; 了解React Native、Flutter、uni-app等跨端框架',
         '了解Mocha、Karma等单元测试框架',
       ],
       comments: [

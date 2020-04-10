@@ -9,4 +9,5 @@ module.exports = {
       errors: false,
     },
   },
+  productionSourceMap: false
 };

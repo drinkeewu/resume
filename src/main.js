@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import EUI from 'element-ui';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -11,7 +10,6 @@ import 'animate.css/animate.min.css';
 import './styles/print.css';
 import { Flex } from '@/components';
 
-Vue.use(EUI);
 Vue.component('flex', Flex);
 
 Vue.config.productionTip = false;

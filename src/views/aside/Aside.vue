@@ -24,9 +24,9 @@
         class="icon-list"
       />
       <div class="online-link">
-        <h3>在线简历地址</h3>
-        <a href="https://drinkeewu.github.io/resume/">
-          https://drinkeewu.github.io/resume/
+        <h3>个人博客</h3>
+        <a href="https://drinkeewu.github.io/">
+          https://drinkeewu.github.io/
         </a>
       </div>
       <block-wrapper
@@ -94,7 +94,7 @@ export default {
       skills: [
         '扎实的JavaScript基础, 熟悉ES6+ 新特性',
         '熟悉Sass、Less等css预处理库',
-        '掌握Vue.js (vuex/vue-router), 并理解其实现原理; 了解React.js(hooks/react-router/redux/dva), 并拥有实际开发经验',
+        '掌握Vue.js (vuex/vue-router), 且理解其实现原理; 熟悉React.js(hooks/react-router/redux/dva), 且拥有实际开发经验',
         '熟悉使用Echarts进行数据可视化开发, 了解Canvas API',
         '熟练使用Eslint、commitizen、TypeScript等工具规范代码',
         '理解前端工程化, 熟悉项目脚手架及Webpack常用配置; 熟悉git、svn代码协作工具',
@@ -140,9 +140,9 @@ ul {
   }
 }
 .resume-aside {
+  position: relative;
   flex: 3;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   color: $deep-blue;
   padding: 40px;
@@ -185,6 +185,13 @@ ul {
       .position {
         font-size: 18px;
       }
+    }
+  }
+  #blog {
+    text-align: center;
+    .blog-link {
+      font-size: 16px;
+      font-weight: bold;
     }
   }
 

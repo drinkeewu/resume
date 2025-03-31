@@ -1,3 +1,13 @@
+<!--
+ * @Author: 吴俊杰 13202481990@qq.com
+ * @Date: 2025-03-30 14:58:51
+ * @LastEditors: 吴俊杰 13202481990@qq.com
+ * @LastEditTime: 2025-03-31 23:08:59
+ * @FilePath: /resume/src/components/pdf-button/PDFButton.vue
+ * @Description:
+ *
+ * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved.
+-->
 <template>
   <div
     id="pdf-button"
@@ -25,7 +35,7 @@ export default {
       if (isSupportDownload) {
         const href = `${isDevelop ? '' : '/resume'}/pdf/resume.pdf`;
         a.setAttribute('href', href);
-        a.setAttribute('download', '简历 | 吴俊杰 - 前端工程师 - 3年工作经验.pdf');
+        a.setAttribute('download', '简历 | 吴俊杰 - 前端工程师 - 8年工作经验.pdf');
         a.click();
       }
     },

@@ -37,12 +37,12 @@
               <h1 class="project-title">
                 {{ project.title }}
               </h1>
-              <span
+              <!-- <span
                 v-if="project.time"
                 class="project-time"
               >
                 {{ project.time.start }} - {{ project.time.end }}
-              </span>
+              </span> -->
             </div>
             <div
               v-if="project.tags && project.tags.length > 0"
@@ -58,7 +58,21 @@
             </div>
           </flex>
         </template>
-        <p>
+        <p v-if="project.url">
+          <span class="title">
+            产品链接：
+          </span>
+          <a
+            v-if="project.url"
+            :href="project.url"
+            class="url"
+            target="_blank"
+          >
+            {{ project.url }}
+          </a>
+        </p>
+
+        <p v-if="project.techs && project.techs.length > 0">
           <span class="title">
             主要技术栈:
           </span>
@@ -69,7 +83,7 @@
             {{ !isLastOf(project.techs, techIndex) ? "、" : "" }}
           </template>
         </p>
-        <p>
+        <p v-if="project.features && project.features.length > 0">
           <span class="title">
             项目描述:
           </span>
@@ -125,6 +139,92 @@ export default {
     return {
       projects: [
         {
+          company: '广州金十信息科技有限公司 - 主要项目',
+          title: '期货盯盘神器',
+          role: '核心开发人员',
+          url: 'https://qihuo.jin10.com/vip/watch/index.html',
+          time: {
+            start: '2020.04',
+            end: '2023.03',
+          },
+          techs: ['VueJs', 'Echarts', 'Vant', 'Canvas', 'Web worker'],
+          features: [
+            '展示国内个种期货金融指标, 如实时行情、K线图、分时图、技术指标等。',
+            'Websocket对接实时快讯、头条、公告等数据',
+            '帮助用户实现盯盘、交易判断',
+          ],
+          dutys: [
+            '使用<em>Vue.js</em>开发前端页面, 使用<em>Echarts</em>绘制数据图表, 使用<em>Canvas</em>绘制高性能k线行情图表',
+            '使用<em>Websocket</em>对接各种实时快讯、头条、公告、指标推送等数据',
+            '使用<em>Web worker</em>处理复杂计算任务, 行情加密文件二进制解压，提升页面性能',
+          ],
+          tags: ['期货金融资讯整合平台'],
+
+        },
+        {
+          title: '金十首页',
+          role: '主要开发及维护人员',
+          url: 'https://www.jin10.com/',
+          techs: ['VueJs', 'ElementUI', 'axios', 'Echarts', 'Vant', 'Canvas'],
+          features: [
+            '实时展示全球实时快讯、头条、公告等数据',
+          ],
+          dutys: [
+            '参与首页通用组件开发, 日历部分模块开发',
+            '加密行情数据对接',
+          ],
+          tags: ['实时快讯'],
+        },
+        {
+          title: '金十财经日历',
+          role: '主要开发及维护人员',
+          url: 'https://rili.jin10.com/',
+          techs: ['Nuxt.js', 'Websocket', 'Notification API'],
+          features: [
+            '通过加载全球各国的每日公布的紧急数据, 支持实时推送桌面通知',
+            '帮助用户准确把握全球财经事件, 提前做好交易准备',
+          ],
+          dutys: [
+            '使用<em>Nuxt.js</em>实现服务端渲染',
+            '使用<em>Websocket</em>对接实时数据',
+            '使用<em>Notification API</em>推送桌面通知',
+            '使用<em>Echarts</em>对数据进行可视化展示, 并支持导出图片',
+          ],
+          tags: ['全球财经数据日历'],
+        },
+        {
+          title: '金十开放平台（API开放平台）',
+          role: '核心开发人员',
+          url: 'https://open.jin10.com/',
+          time: {
+            start: '2020.04',
+            end: '2023.03',
+          },
+          techs: ['VueJs', 'ElementUI', 'axios', 'Echarts', 'Vant', 'Canvas'],
+          features: [
+            '提供API接口给第三方使用, 具备说明文档、在线客服功能，为用户提供可定制化的数据服务',
+          ],
+          dutys: [
+            '使用<em>Vue.js</em>开发前端页面, ',
+            '使用配置数据开发提高开发效率',
+            '独立开发用户注册登录、用户鉴权、完整下单流程及文档说明展示等核心功能',
+          ],
+          tags: ['API开放平台'],
+        },
+        {
+          company: '广州金十信息科技有限公司 - 其他项目',
+          title: '其他职责及工作成果：',
+          dutys: [
+            '开发提供提高快讯发布部分工作效率的Chrome浏览器插件、后台系统sftp一键部署工具插件、OSS命令行一键部署插件、前端与App端桥接通讯的插件开发与维护',
+            '促销活动页开发、独家VIP工具开发、<em>uni-app</em>财经数据小程序开发、大量内部管理后台的开发及维护',
+            '参与前端小组通用组件库开发、独立开发后台组件库、参与项目模板生成插件、可复用聊天室插件的开发维护',
+            '使用<em>vue composition-api</em>重构历史项目插件，已经封装业务逻辑hooks，避免重复造轮子',
+            '负责过多个付费课程栏目的开发，用户鉴权及支付购买流程的对接',
+            '参与过多个面对企业用户的多语言产品开发',
+          ],
+
+        },
+        {
           company: '广州柒盼网络科技有限公司 - 项目',
           title: 'Treep趣地接',
           role: '核心开发人员',
@@ -166,7 +266,7 @@ export default {
           dutys: [
             '首页商品展示页面开发及改版调优',
             '使用<em>Vue.js</em>的<em>slot</em>接口封装可复用布局容器组件, 使用<em>vue-i18n</em>实现多国语言切换功能',
-            '负责订单、酒店模块路由页面切换复杂交互的实现, 并使用<em>keep-alive</em>特性</em>提升系统用户体验</em>',
+            '负责订单、酒店模块路由页面切换复杂交互的实现, 并使用<em>keep-alive</em>特性提升系统用户体验',
             '独立负责Wap端的技术选型、项目搭建架构及开发工作',
           ],
           tags: ['分销商采购平台'],
@@ -182,7 +282,7 @@ export default {
           dutys: [
             '通过使用本人封装的<em>ElementUI</em>业务组件库高效完成PC端全部功能模块的开发',
             '使用<em>VantUI</em>独立开发移动端所有功能模块',
-            '使用<em>rem</em>配合<em>flex</em>实现移动端页面的响应式布局, 通过<em>Sass</em>实现主题颜色切换功能</em>',
+            '使用<em>rem</em>配合<em>flex</em>实现移动端页面的响应式布局, 通过<em>Sass</em>实现主题颜色切换功能',
             '使用<em>vue-i18n</em>实现多国语言切换功能',
           ],
           features: [
@@ -263,7 +363,7 @@ export default {
           techs: ['VueJs', 'Composition-api', 'Echarts'],
           tags: ['自助化统计与挖掘'],
           dutys: [
-            '接手后项目后, 使用<em>mixins</em>抽离重复的业务逻辑代码',
+            '接手项目后, 使用<em>mixins</em>抽离重复的业务逻辑代码',
             '重构项目, 使项目能够嵌入到公司其他项目中并能兼容到IE9以上',
             '优化项目目录结构, 对接口代码进行统一管理, 提高维护效率',
             '使用<em>keep-alive</em>提高用户体验、减少不必要的接口调用, 以缓解后台服务器压力',
@@ -337,7 +437,7 @@ ul li {
   font-weight: bold;
 }
 .project-company {
-  // margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
   color: #333;
   font-weight: bold;

@@ -1,6 +1,17 @@
+<!--
+ * @Author: 吴俊杰 13202481990@qq.com
+ * @Date: 2025-03-30 14:58:51
+ * @LastEditors: 吴俊杰 13202481990@qq.com
+ * @LastEditTime: 2025-03-31 22:44:46
+ * @FilePath: /resume/src/components/text-section/TextSection.vue
+ * @Description:
+ *
+ * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved.
+-->
 <template>
   <div class="comp-text-section">
     <div
+      v-if="title"
       class="comp-text-section__title"
       :style="titleStyle"
     >

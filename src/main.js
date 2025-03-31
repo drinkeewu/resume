@@ -1,4 +1,6 @@
 import Vue from 'vue';
+import { Flex } from '@/components';
+
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -8,7 +10,6 @@ import './assets/font/fix-button/iconfont.css';
 import './assets/font/contact/iconfont.css';
 import 'animate.css/animate.min.css';
 import './styles/print.css';
-import { Flex } from '@/components';
 
 Vue.component('flex', Flex);
 

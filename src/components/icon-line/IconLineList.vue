@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import IconLine from './IconLine.vue';
 import { DEFAULT_COLOR } from '@/common/constants';
+import IconLine from './IconLine.vue';
 
 export default {
   name: 'IconLineList',

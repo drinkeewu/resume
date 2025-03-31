@@ -16,19 +16,19 @@
         <span
           class="work-year"
         >
-          3年工作经验
+          8年工作经验
         </span>
       </div>
       <icon-list
         :list="contacts"
         class="icon-list"
       />
-      <div class="online-link">
+      <!-- <div class="online-link">
         <h3>个人博客</h3>
         <a href="https://drinkeewu.github.io/">
           https://drinkeewu.github.io/
         </a>
-      </div>
+      </div> -->
       <block-wrapper
         id="edu"
         title="教育背景"
@@ -94,18 +94,22 @@ export default {
       skills: [
         '扎实的JavaScript基础, 熟悉ES6+ 新特性',
         '熟悉Sass、Less等css预处理库',
-        '掌握Vue.js (vuex/vue-router), 且理解其实现原理; 熟悉React.js(hooks/react-router/redux/dva), 且拥有实际开发经验',
+        '掌握Vue.js (vuex/vue-router), 且理解其实现原理; 了解React.js(hooks/react-router/redux/dva)',
+        '熟练使用AI工具协助代码开发，比如Cursor、ChatGPT、 Claude等',
         '熟悉使用Echarts进行数据可视化开发, 了解Canvas API',
         '熟练使用Eslint、commitizen、TypeScript等工具规范代码',
-        '理解前端工程化, 熟悉项目脚手架及Webpack常用配置; 熟悉git、svn代码协作工具',
+        '理解前端工程化, 熟悉项目脚手架及Webpack、Vite常用配置; 熟悉git代码协作工具',
         '熟悉HTTP、TCP/IP; 熟悉常用跨域解决方案; 了解浏览器工作原理、前端性能优化',
-        '熟悉使用Taro框架进行小程序开发, 了解小程序原生API; 了解React Native、Flutter、uni-app等跨端框架',
-        '了解Mocha、Karma等单元测试框架',
+        '有uni-app跨端框架开发经验',
+        '了解Jest、Mocha等单元测试框架',
       ],
       comments: [
         '拥有公共组件库开发经验, 主导并开发过多个大型项目; 拥有自动化部署实践经验',
-        '拥有良好的代码编写习惯、清晰的产品思维、良好的业务理解能力、沟通能力和团队协作能力。',
+        '拥有Chrome浏览器插件开发、大数据处理性能优化、大型项目轻代码框架搭建经验',
+        '善于使用zrender、echarts等图表库进行数据可视化开发',
+        '拥有良好的代码编写习惯、清晰的产品思维。具备良好的业务理解能力、沟通能力和团队协作能力',
         '较强的自我驱动学习能力, 乐于钻研学习新技术, 时刻关注行业动态拓展视野',
+        '定时在小组内进行技术分享和前沿科技讨论',
       ],
       contacts: [
         {
@@ -118,10 +122,10 @@ export default {
           text: '13202481990',
           linkType: 'tel',
         },
-        {
-          icon: 'github',
-          text: 'https://github.com/drinkeewu',
-        },
+        // {
+        //   icon: 'github',
+        //   text: 'https://github.com/drinkeewu',
+        // },
       ],
 
     };

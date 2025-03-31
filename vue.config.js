@@ -8,6 +8,7 @@ module.exports = {
       warnings: false,
       errors: false,
     },
+    open: true
   },
   productionSourceMap: false
 };
